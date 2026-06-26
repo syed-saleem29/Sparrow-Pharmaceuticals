@@ -1,0 +1,121 @@
+.hero {
+  background: linear-gradient(135deg, #e8f4fd 0%, #f0faf5 100%);
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 1.25rem;
+}
+
+.hero h1 span {
+  color: var(--color-primary);
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  color: var(--color-light-text);
+}
+
+.heroActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin-bottom: 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.cardIcon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: var(--color-light-text);
+  font-size: 0.95rem;
+}
+
+.productHighlight {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.productText h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: 1rem;
+}
+
+.productText p {
+  color: var(--color-light-text);
+  margin-bottom: 1.5rem;
+}
+
+.imgPlaceholder {
+  background: var(--color-section-bg);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-light-text);
+  font-size: 0.9rem;
+}
+
+.ctaBanner {
+  background: var(--color-primary);
+  color: #fff;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.ctaBanner h2 {
+  color: #fff;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-bottom: 0.75rem;
+}
+
+.ctaBanner p {
+  opacity: 0.85;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+  .productHighlight {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

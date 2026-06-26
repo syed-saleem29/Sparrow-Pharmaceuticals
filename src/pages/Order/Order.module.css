@@ -1,0 +1,106 @@
+.hero {
+  background: var(--color-section-bg);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 0.75rem;
+}
+
+.hero p {
+  color: var(--color-light-text);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.formWrap {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-dark-text);
+}
+
+.field input,
+.field select,
+.field textarea {
+  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--color-dark-text);
+  outline: none;
+  transition: border-color var(--transition);
+  resize: vertical;
+  background: var(--color-bg);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.success {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.success span {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.success h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.success p {
+  color: var(--color-light-text);
+}
+
+@media (max-width: 600px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .formWrap {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,83 @@
+.wrapper {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.fab {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  font-size: 1.4rem;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition);
+}
+
+.fab:hover {
+  transform: scale(1.08);
+}
+
+.window {
+  width: 320px;
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.windowHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.85rem 1rem;
+  font-weight: 600;
+}
+
+.windowHeader button {
+  background: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.body {
+  padding: 1rem;
+  min-height: 120px;
+}
+
+.botMsg {
+  background: var(--color-section-bg);
+  border-radius: var(--radius-md);
+  padding: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.inputRow {
+  display: flex;
+  border-top: 1px solid var(--color-border);
+}
+
+.inputRow input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.inputRow button {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0 1.1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}

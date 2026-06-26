@@ -1,0 +1,71 @@
+.footer {
+  background: var(--color-dark-text);
+  color: #ccc;
+  padding-top: 3rem;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: #fff;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.logo em {
+  color: var(--color-primary);
+  font-style: normal;
+}
+
+.brand p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.links h4 {
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
+}
+
+.links a {
+  font-size: 0.9rem;
+  color: #aaa;
+  transition: color var(--transition);
+}
+
+.links a:hover {
+  color: var(--color-primary);
+}
+
+.bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.82rem;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
