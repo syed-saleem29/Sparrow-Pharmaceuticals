@@ -1,3 +1,7 @@
+AddType image/svg+xml .svg
+AddType image/png .png
+AddType image/x-icon .ico
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
