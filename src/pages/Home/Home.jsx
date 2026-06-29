@@ -51,7 +51,7 @@ export default function Home() {
             </h1>
             <p>
               Sparrow Pharmaceuticals delivers evidence-based nutritional therapy engineered
-              to optimise the surgical patient's metabolic state before, during, and after surgery.
+              to optimise the surgical patient's metabolic state  before, during, and after surgery.
             </p>
             <div className={styles.heroActions}>
               <Link to="/products/surgicover">
