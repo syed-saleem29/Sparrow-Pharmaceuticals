@@ -2,43 +2,61 @@ import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import styles from './Header.module.css'
 
-const navLinks = [
-  { label: 'Home',       to: '/'          },
-  { label: 'Surgicover', to: '/surgicover' },
-  { label: 'Blog',       to: '/blog'       },
-  { label: 'Contact',    to: '/contact'    },
-]
-
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+
+  const close = () => setMenuOpen(false)
 
   return (
     <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
-        <Link to="/" className={styles.logo}>
-          Sparrow <span>Pharma</span>
+        <Link to="/" className={styles.logo} onClick={close}>
+          <img src="/Logo With Name WO BG.png" alt="Sparrow Pharmaceuticals" />
         </Link>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>
-          {navLinks.map(({ label, to }) => (
-            <NavLink
-              key={to}
-              to={to}
-              className={({ isActive }) =>
-                `${styles.navLink} ${isActive ? styles.active : ''}`
-              }
-              onClick={() => setMenuOpen(false)}
-            >
-              {label}
-            </NavLink>
-          ))}
-          <Link to="/order" className={styles.ctaBtn} onClick={() => setMenuOpen(false)}>
+          <NavLink
+            to="/"
+            end
+            className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ''}`}
+            onClick={close}
+          >
+            Home
+          </NavLink>
+
+          <div className={styles.dropdown}>
+            <span className={styles.navLink}>Products ▾</span>
+            <div className={styles.dropdownMenu}>
+              <Link to="/products/surgicover" className={styles.dropdownItem} onClick={close}>
+                <strong>Surgicover</strong>
+                <small>Peri-Operative Nutrition</small>
+              </Link>
+            </div>
+          </div>
+
+          <NavLink
+            to="/blog"
+            className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ''}`}
+            onClick={close}
+          >
+            Blog
+          </NavLink>
+
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ''}`}
+            onClick={close}
+          >
+            Contact
+          </NavLink>
+
+          <Link to="/order" className={styles.ctaBtn} onClick={close}>
             Order Now
           </Link>
         </nav>
 
         <button
-          className={styles.menuBtn}
+          className={`${styles.menuBtn} ${menuOpen ? styles.menuBtnOpen : ''}`}
           aria-label="Toggle menu"
           onClick={() => setMenuOpen(!menuOpen)}
         >

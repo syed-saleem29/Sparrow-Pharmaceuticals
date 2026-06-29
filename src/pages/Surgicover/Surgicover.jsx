@@ -1,72 +1,196 @@
-import styles from './Surgicover.module.css'
-import Button from '../../components/common/Button/Button'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { variants, keyFeatures, nutritionRows, instructions, ingredients } from '../../data/surgicover'
+import styles from './Surgicover.module.css'
 
 export default function Surgicover() {
+  const [activeVariant, setActiveVariant] = useState(variants[0])
+  const [activeImage, setActiveImage] = useState(1)
+
+  const handleVariantChange = (v) => {
+    setActiveVariant(v)
+    setActiveImage(1)
+  }
+
+  const imgSrc = (n) => `/${encodeURIComponent(activeVariant.folder)}/${n}.png`
+
   return (
     <>
+      {/* Hero */}
       <section className={styles.hero}>
         <div className="container">
-          <span className={styles.tag}>Product</span>
+          <span className={styles.tag}>Clinical Nutrition</span>
           <h1>Surgicover</h1>
-          <p>Advanced surgical protection for operating theatres, clinics, and healthcare facilities.</p>
-          <Link to="/order">
-            <Button size="lg">Order Surgicover</Button>
-          </Link>
+          <p>Advanced Peri-Operative Nutritional Therapy by Sparrow Pharmaceuticals</p>
         </div>
       </section>
 
+      {/* Product Section */}
       <section className="section">
-        <div className="container">
-          <h2 className={styles.sectionTitle}>Product Overview</h2>
-          <div className={styles.overview}>
-            <div className={styles.imgPlaceholder}>[ Product Image ]</div>
-            <div>
-              <p>
-                Surgicover is Sparrow Pharmaceuticals' flagship surgical cover product.
-                Engineered with medical-grade materials, it provides superior barrier
-                protection against contamination, fluids, and micro-organisms in critical care environments.
-              </p>
-              <ul className={styles.specList}>
-                <li>✅ Sterile, single-use design</li>
-                <li>✅ Fluid-resistant barrier technology</li>
-                <li>✅ Latex-free and hypoallergenic</li>
-                <li>✅ Compliant with international medical standards</li>
-                <li>✅ Available in multiple sizes</li>
-              </ul>
+        <div className={`container ${styles.productSection}`}>
+
+          {/* Gallery */}
+          <div className={styles.gallery}>
+            <div className={styles.mainImageWrap}>
+              <img
+                key={`${activeVariant.id}-${activeImage}`}
+                src={imgSrc(activeImage)}
+                alt={`Surgicover ${activeVariant.name} view ${activeImage}`}
+                className={styles.mainImage}
+              />
             </div>
+            <div className={styles.thumbnails}>
+              {Array.from({ length: activeVariant.imageCount }, (_, i) => i + 1).map((n) => (
+                <button
+                  key={n}
+                  className={`${styles.thumb} ${n === activeImage ? styles.thumbActive : ''}`}
+                  onClick={() => setActiveImage(n)}
+                  aria-label={`View image ${n}`}
+                >
+                  <img src={imgSrc(n)} alt={`Surgicover ${activeVariant.name} thumbnail ${n}`} />
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Product Info */}
+          <div className={styles.info}>
+            <h2 className={styles.productName}>Surgicover</h2>
+            <p className={styles.productSubtitle}>Peri-Operative Clinical Nutrition Supplement</p>
+
+            <div className={styles.variantSection}>
+              <p className={styles.variantLabel}>Select Flavour</p>
+              <div className={styles.variantBtns}>
+                {variants.map((v) => (
+                  <button
+                    key={v.id}
+                    className={`${styles.variantBtn} ${activeVariant.id === v.id ? styles.variantActive : ''}`}
+                    style={activeVariant.id === v.id ? { background: v.accentColor, borderColor: v.accentColor } : {}}
+                    onClick={() => handleVariantChange(v)}
+                  >
+                    {v.name}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <p className={styles.variantDesc}>{activeVariant.description}</p>
+
+            <div className={styles.statsRow}>
+              <div className={styles.stat}>
+                <strong>30%</strong>
+                <span>Protein</span>
+              </div>
+              <div className={styles.stat}>
+                <strong>0 g</strong>
+                <span>Added Sucrose</span>
+              </div>
+              <div className={styles.stat}>
+                <strong>20 g</strong>
+                <span>Per Serving</span>
+              </div>
+              <div className={styles.stat}>
+                <strong>75 Kcal</strong>
+                <span>Per Serve</span>
+              </div>
+            </div>
+
+            <div className={styles.actions}>
+              <Link to="/order">
+                <button className={styles.orderBtn}>Order Now</button>
+              </Link>
+              <Link to="/contact">
+                <button className={styles.enquiryBtn}>Enquire</button>
+              </Link>
+            </div>
+
+            <p className={styles.disclaimer}>
+              For optimal peri-operative metabolic support, consume <strong>1–2 servings daily</strong> or as directed by your clinical specialist.
+            </p>
           </div>
         </div>
       </section>
 
+      {/* Key Features */}
       <section className={`section section--alt`}>
         <div className="container">
-          <h2 className={styles.sectionTitle}>Key Features</h2>
-          <div className={styles.grid}>
-            {[
-              { title: 'Sterile Packaging',    desc: 'Individually sealed to maintain sterility until point of use.' },
-              { title: 'High Durability',      desc: 'Tear-resistant material ensures reliable performance throughout procedures.' },
-              { title: 'Ergonomic Fit',         desc: 'Designed for ease of use without compromising dexterity.' },
-              { title: 'Eco-Conscious',         desc: 'Manufactured using environmentally responsible processes.' },
-            ].map(({ title, desc }) => (
-              <div key={title} className={styles.card}>
-                <h3>{title}</h3>
-                <p>{desc}</p>
+          <h2 className={styles.sectionTitle}>Why Surgicover Works</h2>
+          <p className={styles.sectionSub}>Clinically formulated to address the metabolic demands of surgical patients</p>
+          <div className={styles.featuresGrid}>
+            {keyFeatures.map((f) => (
+              <div key={f.title} className={styles.featureCard}>
+                <h3>{f.title}</h3>
+                <p>{f.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Nutrition Table */}
       <section className="section">
-        <div className="container" style={{ textAlign: 'center' }}>
-          <h2>Interested in Surgicover?</h2>
-          <p style={{ color: 'var(--color-light-text)', margin: '1rem auto 2rem', maxWidth: 500 }}>
-            Contact our sales team for bulk pricing, samples, or distribution enquiries.
-          </p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-            <Link to="/order"><Button size="lg">Place Order</Button></Link>
-            <Link to="/contact"><Button size="lg" variant="outline">Contact Sales</Button></Link>
+        <div className="container">
+          <h2 className={styles.sectionTitle}>Nutritional Composition</h2>
+          <p className={styles.sectionSub}>Declared values per 20 g serving (one heaped scoop in 150 ml water or milk)</p>
+          <div className={styles.tableWrap}>
+            <table className={styles.table}>
+              <thead>
+                <tr>
+                  <th>Nutrient Parameter</th>
+                  <th>Unit</th>
+                  <th>Per 20 g Serve</th>
+                  <th>Per 100 g Powder</th>
+                </tr>
+              </thead>
+              <tbody>
+                {nutritionRows.map((row) => (
+                  <tr key={row.nutrient} className={row.highlight ? styles.rowHighlight : ''}>
+                    <td>{row.nutrient}</td>
+                    <td>{row.unit}</td>
+                    <td>{row.per20g}</td>
+                    <td>{row.per100g}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* How to Prepare */}
+      <section className={`section section--alt`}>
+        <div className="container">
+          <h2 className={styles.sectionTitle}>How to Prepare</h2>
+          <div className={styles.steps}>
+            {instructions.map((step, i) => (
+              <div key={i} className={styles.step}>
+                <span className={styles.stepNum}>{i + 1}</span>
+                <p>{step}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Ingredients */}
+      <section className="section">
+        <div className="container" style={{ maxWidth: 860, margin: '0 auto' }}>
+          <h2 className={styles.sectionTitle}>Ingredients</h2>
+          <p className={styles.ingredientsList}>{ingredients}</p>
+          <div className={styles.declarations}>
+            <strong>Regulatory Declarations:</strong> CONTAINS NATURALLY OCCURRING SUGARS. Contains Milk and Soy allergens. Not for parenteral/intravenous use. Best stored in a cool, dry place away from direct sunlight.
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className={styles.ctaBanner}>
+        <div className="container">
+          <h2>Ready to optimise surgical recovery?</h2>
+          <p>Contact our clinical team for bulk pricing, institutional supply, or clinical samples.</p>
+          <div className={styles.ctaActions}>
+            <Link to="/order"><button className={styles.ctaPrimary}>Place Order</button></Link>
+            <Link to="/contact"><button className={styles.ctaSecondary}>Contact Sales</button></Link>
           </div>
         </div>
       </section>

@@ -13,7 +13,7 @@ export default function Footer() {
         <div className={styles.links}>
           <h4>Quick Links</h4>
           <Link to="/">Home</Link>
-          <Link to="/surgicover">Surgicover</Link>
+          <Link to="/products/surgicover">Surgicover</Link>
           <Link to="/blog">Blog</Link>
           <Link to="/contact">Contact</Link>
           <Link to="/order">Order</Link>

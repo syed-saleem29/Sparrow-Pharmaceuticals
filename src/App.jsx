@@ -15,7 +15,8 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/surgicover" element={<Surgicover />} />
+          <Route path="/products/surgicover" element={<Surgicover />} />
+          <Route path="/surgicover" element={<Navigate to="/products/surgicover" replace />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/order" element={<Order />} />
