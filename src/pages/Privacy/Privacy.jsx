@@ -43,10 +43,10 @@ export default function Privacy() {
           <h2>2. How We Use Your Information</h2>
           <p>We use the personal data we collect for the following purposes:</p>
           <ul>
-            <li><strong>To respond to enquiries</strong> — answering questions submitted via our contact form or by email</li>
-            <li><strong>To process orders and quotations</strong> — fulfilling institutional supply requests and bulk orders</li>
-            <li><strong>To communicate product and clinical updates</strong> — only where you have explicitly opted in to receive such communications</li>
-            <li><strong>To comply with legal obligations</strong> — including any applicable regulatory, tax, or accounting requirements</li>
+            <li><strong>To respond to enquiries</strong>  answering questions submitted via our contact form or by email</li>
+            <li><strong>To process orders and quotations</strong>  fulfilling institutional supply requests and bulk orders</li>
+            <li><strong>To communicate product and clinical updates</strong>  only where you have explicitly opted in to receive such communications</li>
+            <li><strong>To comply with legal obligations</strong>  including any applicable regulatory, tax, or accounting requirements</li>
             <li><strong>To maintain the security and integrity of our systems</strong></li>
           </ul>
           <p>We do not sell, rent, or trade your personal data to any third party for marketing purposes.</p>
@@ -56,16 +56,16 @@ export default function Privacy() {
             Under the DPDPA 2023, we process your personal data on the following lawful bases:
           </p>
           <ul>
-            <li><strong>Consent</strong> — where you have provided explicit consent, such as subscribing to updates</li>
-            <li><strong>Legitimate interests</strong> — for responding to direct business enquiries and processing orders</li>
-            <li><strong>Legal obligation</strong> — where processing is necessary to comply with applicable Indian law</li>
+            <li><strong>Consent</strong>  where you have provided explicit consent, such as subscribing to updates</li>
+            <li><strong>Legitimate interests</strong>  for responding to direct business enquiries and processing orders</li>
+            <li><strong>Legal obligation</strong>  where processing is necessary to comply with applicable Indian law</li>
           </ul>
 
           <h2>4. Data Sharing and Disclosure</h2>
           <p>We may share your personal data with:</p>
           <ul>
-            <li><strong>Service providers</strong> — third-party vendors who assist in website hosting, email delivery, and order fulfilment, under strict confidentiality obligations</li>
-            <li><strong>Legal and regulatory authorities</strong> — where required by applicable law, court order, or regulatory request</li>
+            <li><strong>Service providers</strong>  third-party vendors who assist in website hosting, email delivery, and order fulfilment, under strict confidentiality obligations</li>
+            <li><strong>Legal and regulatory authorities</strong>  where required by applicable law, court order, or regulatory request</li>
           </ul>
           <p>
             All third-party service providers who process personal data on our behalf are bound by data
@@ -92,11 +92,11 @@ export default function Privacy() {
           <h2>7. Your Rights Under DPDPA 2023</h2>
           <p>As a Data Principal under the Digital Personal Data Protection Act, 2023, you have the right to:</p>
           <ul>
-            <li><strong>Access</strong> — request a summary of the personal data we hold about you</li>
-            <li><strong>Correction</strong> — request correction of inaccurate or incomplete personal data</li>
-            <li><strong>Erasure</strong> — request deletion of your personal data, subject to legal retention requirements</li>
-            <li><strong>Withdrawal of consent</strong> — withdraw consent for any processing based on consent, at any time</li>
-            <li><strong>Grievance redressal</strong> — lodge a complaint with our Consent Manager (contact details below)</li>
+            <li><strong>Access</strong>  request a summary of the personal data we hold about you</li>
+            <li><strong>Correction</strong>  request correction of inaccurate or incomplete personal data</li>
+            <li><strong>Erasure</strong>  request deletion of your personal data, subject to legal retention requirements</li>
+            <li><strong>Withdrawal of consent</strong>  withdraw consent for any processing based on consent, at any time</li>
+            <li><strong>Grievance redressal</strong>  lodge a complaint with our Consent Manager (contact details below)</li>
           </ul>
           <p>
             To exercise any of these rights, please contact us using the details provided in Section 9.

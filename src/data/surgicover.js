@@ -27,7 +27,7 @@ export const variants = [
     accentColor: '#8B6914',
     bgColor: '#F9F5EC',
     description:
-      'Specially formulated for diabetic patients — a dry fruits flavour with zero added sucrose, supporting glycaemic control while delivering the same clinically proven peri-operative nutritional support.',
+      'Specially formulated for diabetic patients  a dry fruits flavour with zero added sucrose, supporting glycaemic control while delivering the same clinically proven peri-operative nutritional support.',
   },
 ]
 
@@ -38,11 +38,11 @@ export const keyFeatures = [
   },
   {
     title: 'Hybrid Protein Matrix (PDCAAS 1.0)',
-    desc: 'A blend of Soya Protein Isolate, Defatted Soya Flour, and Skimmed Milk Powder delivers a PDCAAS of 1.0 — clinically equivalent to whey, with superior GI tolerance for post-operative patients.',
+    desc: 'A blend of Soya Protein Isolate, Defatted Soya Flour, and Skimmed Milk Powder delivers a PDCAAS of 1.0  clinically equivalent to whey, with superior GI tolerance for post-operative patients.',
   },
   {
     title: 'Zero Added Sucrose',
-    desc: 'Completely free from added sucrose. Sweetened with sucralose to prevent peri-operative glycaemic fluctuations — directly correlated with surgical site infections and delayed wound closure.',
+    desc: 'Completely free from added sucrose. Sweetened with sucralose to prevent peri-operative glycaemic fluctuations  directly correlated with surgical site infections and delayed wound closure.',
   },
   {
     title: 'Micro-Nutrient Synergy',

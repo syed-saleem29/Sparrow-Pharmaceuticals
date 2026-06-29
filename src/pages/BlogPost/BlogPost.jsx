@@ -73,7 +73,7 @@ export default function BlogPost() {
           <aside className={styles.sidebar}>
             <div className={styles.sideCard}>
               <h4>About Surgicover</h4>
-              <p>Peri-operative clinical nutrition supplement by Sparrow Pharmaceuticals — formulated for the metabolic demands of surgical patients.</p>
+              <p>Peri-operative clinical nutrition supplement by Sparrow Pharmaceuticals  formulated for the metabolic demands of surgical patients.</p>
               <Link to="/products/surgicover">
                 <button className={styles.sideBtn}>View Product</button>
               </Link>

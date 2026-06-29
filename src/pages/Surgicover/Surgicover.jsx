@@ -13,7 +13,7 @@ export default function Surgicover() {
     setActiveImage(1)
   }
 
-  const imgSrc = (n) => `/${encodeURIComponent(activeVariant.folder)}/${n}.png`
+  const imgSrc = (n) => `/${encodeURIComponent(activeVariant.folder)}/${n}.webp`
 
   return (
     <>

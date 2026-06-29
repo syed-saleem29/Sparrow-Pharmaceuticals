@@ -21,7 +21,7 @@
   <!-- Circle ring (behind bird) -->
   <circle cx="49" cy="57" r="38" fill="none" stroke="url(#rGrad)" stroke-width="2.5"/>
 
-  <!-- Wing feathers — 6 narrow leaf shapes fanning upper-left from shoulder -->
+  <!-- Wing feathers  6 narrow leaf shapes fanning upper-left from shoulder -->
   <!-- Each: M root-left Q ctrl tip Q ctrl root-right Z -->
   <path fill="url(#wGrad)" d="M 48,35 Q 31,20 14, 8 Q 33,22 51,32 Z"/>
   <path fill="url(#wGrad)" d="M 48,36 Q 28,24 10,15 Q 30,27 50,38 Z"/>

@@ -36,8 +36,8 @@ export default function Terms() {
           <h2>2. Medical and Clinical Disclaimer</h2>
           <p>
             <strong>
-              The content on this Website — including product descriptions, nutritional information,
-              blog articles, and clinical references — is provided for informational and educational
+              The content on this Website  including product descriptions, nutritional information,
+              blog articles, and clinical references  is provided for informational and educational
               purposes only. It does not constitute medical advice, clinical guidance, or a substitute
               for consultation with a qualified healthcare professional.
             </strong>
@@ -56,8 +56,8 @@ export default function Terms() {
 
           <h2>3. Intellectual Property</h2>
           <p>
-            All content on this Website — including text, graphics, logos, photography, product images,
-            icons, audio clips, and software — is the property of Sparrow Pharmaceuticals or its content
+            All content on this Website  including text, graphics, logos, photography, product images,
+            icons, audio clips, and software  is the property of Sparrow Pharmaceuticals or its content
             suppliers and is protected by applicable Indian and international intellectual property laws.
           </p>
           <p>
@@ -118,7 +118,7 @@ export default function Terms() {
           <p>
             To the maximum extent permitted by applicable law, Sparrow Pharmaceuticals shall not be
             liable for any direct, indirect, incidental, consequential, or punitive damages arising
-            from your use of, or inability to use, this Website or any content herein — including
+            from your use of, or inability to use, this Website or any content herein  including
             but not limited to reliance on clinical or product information, errors or omissions in
             content, or interruptions in Website availability.
           </p>

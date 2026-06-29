@@ -20,7 +20,7 @@ export const blogPosts = [
       },
       {
         type: 'p',
-        text: 'Surgery triggers a neuroendocrine stress response that directly impairs gastrointestinal function. Anaesthesia, pain medications, and the systemic inflammatory cascade collectively slow gastric motility and reduce bowel peristalsis. At the mucosal level, the stress response induces transient gut barrier dysfunction and down-regulation of brush border disaccharidases — the enzymes responsible for breaking down lactose in the small intestine.',
+        text: 'Surgery triggers a neuroendocrine stress response that directly impairs gastrointestinal function. Anaesthesia, pain medications, and the systemic inflammatory cascade collectively slow gastric motility and reduce bowel peristalsis. At the mucosal level, the stress response induces transient gut barrier dysfunction and down-regulation of brush border disaccharidases  the enzymes responsible for breaking down lactose in the small intestine.',
       },
       {
         type: 'p',
@@ -32,7 +32,7 @@ export const blogPosts = [
       },
       {
         type: 'p',
-        text: 'Soya Protein Isolate is a complete plant-based protein with a Protein Digestibility-Corrected Amino Acid Score (PDCAAS) of 1.0 — the highest attainable score, equivalent to casein, egg white, and milk protein. This means soya protein satisfies 100% of the body\'s indispensable amino acid requirements when consumed in adequate quantities.',
+        text: 'Soya Protein Isolate is a complete plant-based protein with a Protein Digestibility-Corrected Amino Acid Score (PDCAAS) of 1.0  the highest attainable score, equivalent to casein, egg white, and milk protein. This means soya protein satisfies 100% of the body\'s indispensable amino acid requirements when consumed in adequate quantities.',
       },
       {
         type: 'p',
@@ -44,7 +44,7 @@ export const blogPosts = [
       },
       {
         type: 'p',
-        text: 'Soya proteins contain high concentrations of storage globulins — specifically β-conglycinin and glycinin — which exert anti-inflammatory and antioxidant effects within the intestinal lumen. In a surgical patient where systemic inflammation is driving accelerated catabolism, these effects help preserve mucosal integrity, support gut-associated lymphoid tissue (GALT), and limit the translocation of inflammatory signals into systemic circulation.',
+        text: 'Soya proteins contain high concentrations of storage globulins  specifically β-conglycinin and glycinin  which exert anti-inflammatory and antioxidant effects within the intestinal lumen. In a surgical patient where systemic inflammation is driving accelerated catabolism, these effects help preserve mucosal integrity, support gut-associated lymphoid tissue (GALT), and limit the translocation of inflammatory signals into systemic circulation.',
       },
       {
         type: 'h2',
@@ -56,7 +56,7 @@ export const blogPosts = [
       },
       {
         type: 'p',
-        text: 'The 20g serving is dosed three to four times daily (TID/QID), delivering 18–24g of bioavailable protein per day in manageable volumes. Clinical evidence demonstrates that fractionated protein administration provides a more sustained stimulatory effect on skeletal muscle protein synthesis via repeated mTOR pathway activation — without triggering the "muscle full" effect seen with continuous large-bolus dosing.',
+        text: 'The 20g serving is dosed three to four times daily (TID/QID), delivering 18–24g of bioavailable protein per day in manageable volumes. Clinical evidence demonstrates that fractionated protein administration provides a more sustained stimulatory effect on skeletal muscle protein synthesis via repeated mTOR pathway activation  without triggering the "muscle full" effect seen with continuous large-bolus dosing.',
       },
       {
         type: 'h2',
@@ -69,7 +69,7 @@ export const blogPosts = [
       {
         type: 'callout',
         title: 'Clinical Summary',
-        text: 'Soya Protein Isolate in Surgicover delivers PDCAAS 1.0 protein quality in a lactose-free, easily digestible form, with a 20g serving optimised for fractionated post-operative dosing. It supports early enteral feeding, minimises gastrointestinal complications, and provides sustained amino acid availability — without the lactose burden or economic barrier of whey-based alternatives.',
+        text: 'Soya Protein Isolate in Surgicover delivers PDCAAS 1.0 protein quality in a lactose-free, easily digestible form, with a 20g serving optimised for fractionated post-operative dosing. It supports early enteral feeding, minimises gastrointestinal complications, and provides sustained amino acid availability  without the lactose burden or economic barrier of whey-based alternatives.',
       },
     ],
   },
@@ -86,7 +86,7 @@ export const blogPosts = [
     content: [
       {
         type: 'lead',
-        text: 'L-Arginine is one of the most studied amino acids in surgical nutrition science. Its role extends far beyond standard protein synthesis — it is the sole substrate for nitric oxide production, a critical precursor for collagen biosynthesis, and a key modulator of surgical wound immunity.',
+        text: 'L-Arginine is one of the most studied amino acids in surgical nutrition science. Its role extends far beyond standard protein synthesis  it is the sole substrate for nitric oxide production, a critical precursor for collagen biosynthesis, and a key modulator of surgical wound immunity.',
       },
       {
         type: 'h2',
@@ -122,11 +122,11 @@ export const blogPosts = [
       },
       {
         type: 'p',
-        text: 'Beyond nitric oxide synthesis, L-Arginine serves as the primary substrate for the arginase enzyme family, initiating a cascade essential for structural tissue reconstruction: L-Arginine → L-Ornithine, which bifurcates into (1) polyamine synthesis via ornithine decarboxylase — essential for fibroblast proliferation and tissue growth — and (2) L-Proline synthesis via ornithine aminotransferase, the primary structural amino acid for the collagen triple-helix.',
+        text: 'Beyond nitric oxide synthesis, L-Arginine serves as the primary substrate for the arginase enzyme family, initiating a cascade essential for structural tissue reconstruction: L-Arginine → L-Ornithine, which bifurcates into (1) polyamine synthesis via ornithine decarboxylase  essential for fibroblast proliferation and tissue growth  and (2) L-Proline synthesis via ornithine aminotransferase, the primary structural amino acid for the collagen triple-helix.',
       },
       {
         type: 'p',
-        text: 'Collagen synthesis requires prolyl hydroxylase and lysyl hydroxylase to stabilise the triple-helix — reactions that depend on Vitamin C as an essential cofactor. This is why Surgicover co-delivers L-Arginine (200mg/serve) with Vitamin C (32mg/serve): the two nutrients work in biochemical concert to drive complete collagen formation from substrate through to mature extracellular matrix deposition.',
+        text: 'Collagen synthesis requires prolyl hydroxylase and lysyl hydroxylase to stabilise the triple-helix  reactions that depend on Vitamin C as an essential cofactor. This is why Surgicover co-delivers L-Arginine (200mg/serve) with Vitamin C (32mg/serve): the two nutrients work in biochemical concert to drive complete collagen formation from substrate through to mature extracellular matrix deposition.',
       },
       {
         type: 'h2',
@@ -139,10 +139,10 @@ export const blogPosts = [
       {
         type: 'ul',
         items: [
-          'Significant reduction in wound size and restoration of depressed hydroxyproline levels — the established biochemical index of new collagen synthesis',
+          'Significant reduction in wound size and restoration of depressed hydroxyproline levels  the established biochemical index of new collagen synthesis',
           'Increased wound breaking strength, reducing the risk of incisional dehiscence in the early post-operative period',
           'Over 40% increase in collagen deposition in standardised wounds, alongside significant increases in T-cell-mediated immune responses',
-          'Benefits plateau at high doses (>14g/day) — making targeted fractionated delivery clinically optimal over isolated high-dose supplementation',
+          'Benefits plateau at high doses (>14g/day)  making targeted fractionated delivery clinically optimal over isolated high-dose supplementation',
         ],
       },
       {
@@ -173,7 +173,7 @@ export const blogPosts = [
     content: [
       {
         type: 'lead',
-        text: 'Post-operative hyperglycaemia is one of the most consistently documented risk factors for surgical complications — and it affects diabetic and non-diabetic patients alike. Understanding its mechanism is essential to understanding why the complete elimination of added sucrose from Surgicover is a clinical decision, not a marketing one.',
+        text: 'Post-operative hyperglycaemia is one of the most consistently documented risk factors for surgical complications  and it affects diabetic and non-diabetic patients alike. Understanding its mechanism is essential to understanding why the complete elimination of added sucrose from Surgicover is a clinical decision, not a marketing one.',
       },
       {
         type: 'h2',
@@ -181,7 +181,7 @@ export const blogPosts = [
       },
       {
         type: 'p',
-        text: 'Surgical trauma triggers a coordinated neuroendocrine stress response involving hypersecretion of cortisol, glucagon, and catecholamines. Concurrently, the inflammatory cascade releases pro-inflammatory cytokines — TNF-α, IL-1, and IL-6 — which directly impair peripheral insulin receptor signalling, creating a transient but severe state of peripheral insulin resistance even in non-diabetic patients. Post-operative blood glucose can rise to 10–14 mmol/L in otherwise euglycaemic individuals.',
+        text: 'Surgical trauma triggers a coordinated neuroendocrine stress response involving hypersecretion of cortisol, glucagon, and catecholamines. Concurrently, the inflammatory cascade releases pro-inflammatory cytokines  TNF-α, IL-1, and IL-6  which directly impair peripheral insulin receptor signalling, creating a transient but severe state of peripheral insulin resistance even in non-diabetic patients. Post-operative blood glucose can rise to 10–14 mmol/L in otherwise euglycaemic individuals.',
       },
       {
         type: 'h2',
@@ -190,10 +190,10 @@ export const blogPosts = [
       {
         type: 'ul',
         items: [
-          'Increased surgical site infection (SSI) rate — hyperglycaemia impairs neutrophil chemotaxis and phagocytic function, reducing immune clearance of pathogens at the wound site',
-          'Delayed wound closure — elevated blood glucose inhibits collagen synthesis by reducing prolyl hydroxylase activity and impairing fibroblast proliferation',
-          'Increased anastomotic leak risk — particularly relevant in gastrointestinal surgical procedures',
-          'Prolonged hospital stay — multiple studies demonstrate a direct correlation between peri-operative glycaemic control and post-operative length of stay',
+          'Increased surgical site infection (SSI) rate  hyperglycaemia impairs neutrophil chemotaxis and phagocytic function, reducing immune clearance of pathogens at the wound site',
+          'Delayed wound closure  elevated blood glucose inhibits collagen synthesis by reducing prolyl hydroxylase activity and impairing fibroblast proliferation',
+          'Increased anastomotic leak risk  particularly relevant in gastrointestinal surgical procedures',
+          'Prolonged hospital stay  multiple studies demonstrate a direct correlation between peri-operative glycaemic control and post-operative length of stay',
         ],
       },
       {
@@ -202,7 +202,7 @@ export const blogPosts = [
       },
       {
         type: 'p',
-        text: 'Sucrose has a glycaemic index (GI) of 65. When a patient consuming a sucrose-sweetened supplement is already in a state of post-operative insulin resistance, the rapid glucose spike from sucrose digestion compounds the existing hyperglycaemia — creating a pro-inflammatory, immunosuppressive metabolic environment at the moment of maximum vulnerability.',
+        text: 'Sucrose has a glycaemic index (GI) of 65. When a patient consuming a sucrose-sweetened supplement is already in a state of post-operative insulin resistance, the rapid glucose spike from sucrose digestion compounds the existing hyperglycaemia  creating a pro-inflammatory, immunosuppressive metabolic environment at the moment of maximum vulnerability.',
       },
       {
         type: 'p',
@@ -223,7 +223,7 @@ export const blogPosts = [
       {
         type: 'callout',
         title: 'For the Prescribing Clinician',
-        text: 'In any patient with post-operative insulin resistance — which includes essentially all major surgical patients during the first 72 hours — a nutrition supplement containing added sucrose actively counteracts glycaemic control efforts. Surgicover\'s zero-added-sucrose formulation with sucralose sweetening is specifically designed to deliver clinical-grade peri-operative nutrition without any glycaemic liability.',
+        text: 'In any patient with post-operative insulin resistance  which includes essentially all major surgical patients during the first 72 hours  a nutrition supplement containing added sucrose actively counteracts glycaemic control efforts. Surgicover\'s zero-added-sucrose formulation with sucralose sweetening is specifically designed to deliver clinical-grade peri-operative nutrition without any glycaemic liability.',
       },
     ],
   },
@@ -244,11 +244,11 @@ export const blogPosts = [
       },
       {
         type: 'h2',
-        text: 'What ERAS Changed — and Why It Matters',
+        text: 'What ERAS Changed  and Why It Matters',
       },
       {
         type: 'p',
-        text: 'For decades, patients fasted from midnight before surgery based on outdated assumptions about gastric emptying and aspiration risk. This prolonged fasting depletes glycogen reserves, accelerates muscle proteolysis, and initiates a catabolic cascade that the patient then has to reverse post-operatively — while managing the simultaneous metabolic demands of wound healing.',
+        text: 'For decades, patients fasted from midnight before surgery based on outdated assumptions about gastric emptying and aspiration risk. This prolonged fasting depletes glycogen reserves, accelerates muscle proteolysis, and initiates a catabolic cascade that the patient then has to reverse post-operatively  while managing the simultaneous metabolic demands of wound healing.',
       },
       {
         type: 'p',
@@ -256,7 +256,7 @@ export const blogPosts = [
       },
       {
         type: 'h2',
-        text: 'Phase I — Pre-Operative Prehabilitation (7 to 5 Days Before Surgery)',
+        text: 'Phase I  Pre-Operative Prehabilitation (7 to 5 Days Before Surgery)',
       },
       {
         type: 'p',
@@ -264,15 +264,15 @@ export const blogPosts = [
       },
       {
         type: 'p',
-        text: 'Surgicover Protocol — Phase I: 1 serving (20g dissolved in 150ml lukewarm water or milk) twice daily — mid-morning and before bed — supplementing a nutrient-dense diet. The PDCAAS 1.0 protein matrix and micronutrient complex address pre-existing deficiencies, while L-Arginine and L-Leucine begin priming the collagen synthesis and muscle protein synthesis pathways.',
+        text: 'Surgicover Protocol  Phase I: 1 serving (20g dissolved in 150ml lukewarm water or milk) twice daily  mid-morning and before bed  supplementing a nutrient-dense diet. The PDCAAS 1.0 protein matrix and micronutrient complex address pre-existing deficiencies, while L-Arginine and L-Leucine begin priming the collagen synthesis and muscle protein synthesis pathways.',
       },
       {
         type: 'p',
-        text: 'Patients at nutritional risk — BMI under 18.5, unintentional weight loss exceeding 10% in 6 months, or those scheduled for major gastrointestinal, orthopaedic, or oncological procedures — are particularly appropriate candidates for early prehabilitation.',
+        text: 'Patients at nutritional risk  BMI under 18.5, unintentional weight loss exceeding 10% in 6 months, or those scheduled for major gastrointestinal, orthopaedic, or oncological procedures  are particularly appropriate candidates for early prehabilitation.',
       },
       {
         type: 'h2',
-        text: 'Phase II — The Pre-Operative Window (24 Hours to 2 Hours Pre-Anaesthesia)',
+        text: 'Phase II  The Pre-Operative Window (24 Hours to 2 Hours Pre-Anaesthesia)',
       },
       {
         type: 'p',
@@ -288,7 +288,7 @@ export const blogPosts = [
       },
       {
         type: 'h2',
-        text: 'Phase III — Post-Operative Transitional Feeding (Day 1 to Day 14 and Beyond)',
+        text: 'Phase III  Post-Operative Transitional Feeding (Day 1 to Day 14 and Beyond)',
       },
       {
         type: 'p',
@@ -296,7 +296,7 @@ export const blogPosts = [
       },
       {
         type: 'p',
-        text: 'Phase A (Day 1): Early oral feeding begins with clear liquids — water, coconut water, or strained vegetable broth. Surgicover is not yet introduced at this stage.',
+        text: 'Phase A (Day 1): Early oral feeding begins with clear liquids  water, coconut water, or strained vegetable broth. Surgicover is not yet introduced at this stage.',
       },
       {
         type: 'p',
@@ -317,7 +317,7 @@ export const blogPosts = [
           'Faster return of normal gastrointestinal motility and gut barrier function',
           'Preserved lean muscle mass, supporting improved respiratory function and earlier mobilisation',
           'Lower incidence of nosocomial infections through enhanced T-lymphocyte and macrophage activity',
-          'Reduced post-operative length of stay — reducing even by one day yields substantial cost savings for healthcare institutions',
+          'Reduced post-operative length of stay  reducing even by one day yields substantial cost savings for healthcare institutions',
         ],
       },
       {

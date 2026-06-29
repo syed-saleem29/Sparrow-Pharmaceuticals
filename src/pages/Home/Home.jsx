@@ -31,7 +31,7 @@ const phases = [
 ]
 
 const whyChoose = [
-  { Icon: Microscope,  title: 'Clinically Formulated',   desc: 'Built on the science of ERAS protocols — evidence-based peri-operative nutrition to minimise catabolic depletion.' },
+  { Icon: Microscope,  title: 'Clinically Formulated',   desc: 'Built on the science of ERAS protocols  evidence-based peri-operative nutrition to minimise catabolic depletion.' },
   { Icon: Dna,         title: 'PDCAAS 1.0 Protein',      desc: 'Hybrid soya-milk protein matrix with a perfect amino acid score, with superior post-operative GI tolerance vs whey.' },
   { Icon: ShieldCheck, title: 'Zero Added Sucrose',       desc: 'Acute post-operative hyperglycaemia is directly linked to surgical site infections. Surgicover eliminates added sucrose entirely.' },
   { Icon: Building2,   title: 'B2B Healthcare Focus',     desc: 'Designed for hospitals, surgical centres, and clinical dietitians. Bulk supply, institutional pricing, and clinical support available.' },
@@ -51,7 +51,7 @@ export default function Home() {
             </h1>
             <p>
               Sparrow Pharmaceuticals delivers evidence-based nutritional therapy engineered
-              to optimise the surgical patient's metabolic state — before, during, and after surgery.
+              to optimise the surgical patient's metabolic state  before, during, and after surgery.
             </p>
             <div className={styles.heroActions}>
               <Link to="/products/surgicover">
@@ -85,17 +85,17 @@ export default function Home() {
         <div className={`container ${styles.spotlight}`}>
           <div className={styles.spotlightImages}>
             <div className={styles.spotlightMain}>
-              <img src="/Vanilla/1.png" alt="Surgicover Vanilla" />
+              <img src="/Vanilla/1.webp" alt="Surgicover Vanilla" />
               <div className={styles.spotReflection}>
-                <img src="/Vanilla/1.png" alt="" aria-hidden="true" />
+                <img src="/Vanilla/1.webp" alt="" aria-hidden="true" />
               </div>
             </div>
             <div className={styles.spotlightSide}>
               <div className={styles.spotSideImg}>
-                <img src="/Chocolate/1.png" alt="Surgicover Chocolate" />
+                <img src="/Chocolate/1.webp" alt="Surgicover Chocolate" />
               </div>
               <div className={styles.spotSideImg}>
-                <img src="/Dry%20Fruits/1.png" alt="Surgicover Diabetic Cover" />
+                <img src="/Dry%20Fruits/1.webp" alt="Surgicover Diabetic Cover" />
               </div>
             </div>
           </div>
@@ -108,7 +108,7 @@ export default function Home() {
             </p>
             <p>
               Formulated with a dual-action amino acid spike, a hybrid protein matrix with PDCAAS 1.0,
-              and zero added sucrose — Surgicover serves as the essential metabolic bridge throughout
+              and zero added sucrose  Surgicover serves as the essential metabolic bridge throughout
               the entire surgical timeline.
             </p>
             <p className={styles.flavourLine}>
@@ -126,7 +126,7 @@ export default function Home() {
         <div className="container">
           <h2 className={styles.sectionTitle} data-reveal>Why Choose Sparrow?</h2>
           <p className={styles.sectionSub} data-reveal="d1">
-            Purpose-built for the surgical setting — not a generic supplement repurposed for clinical use.
+            Purpose-built for the surgical setting  not a generic supplement repurposed for clinical use.
           </p>
           <div className={styles.whyGrid}>
             {whyChoose.map(({ Icon, title, desc }, i) => (

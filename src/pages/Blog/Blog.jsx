@@ -13,7 +13,7 @@ export default function Blog() {
           <h1>Clinical Insights</h1>
           <p>
             Evidence-based articles on peri-operative nutrition, surgical recovery science,
-            and ERAS protocols — written by the Sparrow Pharmaceuticals clinical team.
+            and ERAS protocols  written by the Sparrow Pharmaceuticals clinical team.
           </p>
         </div>
       </section>
