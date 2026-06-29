@@ -14,10 +14,26 @@
   height: 72px;
 }
 
-.logo img {
-  height: 48px;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logoIcon {
+  height: 44px;
   width: auto;
   display: block;
+  flex-shrink: 0;
+}
+
+.logoText {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-dark-text);
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 .nav {

@@ -164,7 +164,10 @@ export default function Surgicover() {
           <div className={styles.steps}>
             {instructions.map((step, i) => (
               <div key={i} className={styles.step}>
-                <span className={styles.stepNum}>{i + 1}</span>
+                <div className={styles.stepHeader}>
+                  <span className={styles.stepNum}>{i + 1}</span>
+                  <span className={styles.stepLabel}>Step {i + 1}</span>
+                </div>
                 <p>{step}</p>
               </div>
             ))}

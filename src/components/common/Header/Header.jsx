@@ -11,7 +11,8 @@ export default function Header() {
     <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
         <Link to="/" className={styles.logo} onClick={close}>
-          <img src="/Logo With Name WO BG.png" alt="Sparrow Pharmaceuticals" />
+          <img src="/Logo Without BG.png" alt="Sparrow Pharmaceuticals bird logo" className={styles.logoIcon} />
+          <span className={styles.logoText}>Sparrow Pharmaceuticals</span>
         </Link>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>
