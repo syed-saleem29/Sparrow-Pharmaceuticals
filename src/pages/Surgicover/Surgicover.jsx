@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Zap, Dna, ShieldCheck, Microscope } from 'lucide-react'
 import { variants, keyFeatures, nutritionRows, instructions, ingredients } from '../../data/surgicover'
 import styles from './Surgicover.module.css'
 
@@ -39,6 +40,14 @@ export default function Surgicover() {
                 className={styles.mainImage}
               />
             </div>
+            <div className={styles.reflection}>
+              <img
+                src={imgSrc(activeImage)}
+                alt=""
+                aria-hidden="true"
+                className={styles.reflectionImg}
+              />
+            </div>
             <div className={styles.thumbnails}>
               {Array.from({ length: activeVariant.imageCount }, (_, i) => i + 1).map((n) => (
                 <button
@@ -54,7 +63,7 @@ export default function Surgicover() {
           </div>
 
           {/* Product Info */}
-          <div className={styles.info}>
+          <div className={styles.info} data-reveal="d1">
             <h2 className={styles.productName}>Surgicover</h2>
             <p className={styles.productSubtitle}>Peri-Operative Clinical Nutrition Supplement</p>
 
@@ -117,10 +126,11 @@ export default function Surgicover() {
           <h2 className={styles.sectionTitle}>Why Surgicover Works</h2>
           <p className={styles.sectionSub}>Clinically formulated to address the metabolic demands of surgical patients</p>
           <div className={styles.featuresGrid}>
-            {keyFeatures.map((f) => (
-              <div key={f.title} className={styles.featureCard}>
-                <h3>{f.title}</h3>
-                <p>{f.desc}</p>
+            {[Zap, Dna, ShieldCheck, Microscope].map((Icon, i) => (
+              <div key={keyFeatures[i].title} className={styles.featureCard} data-reveal={`d${i + 1}`}>
+                <span className={styles.featureIcon}><Icon size={26} strokeWidth={1.6} /></span>
+                <h3>{keyFeatures[i].title}</h3>
+                <p>{keyFeatures[i].desc}</p>
               </div>
             ))}
           </div>

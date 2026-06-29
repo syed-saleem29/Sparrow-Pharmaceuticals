@@ -1,8 +1,8 @@
 /* Hero */
 .hero {
   background: linear-gradient(135deg, #e8f4fd 0%, #f0faf5 100%);
-  padding: 7rem 0;
-  min-height: 88vh;
+  padding: 4rem 0;
+  min-height: 55vh;
   display: flex;
   align-items: center;
 }
@@ -155,21 +155,43 @@
 
 .spotlightMain {
   grid-row: span 2;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  background: var(--color-section-bg);
-  border: 1px solid var(--color-border);
-  aspect-ratio: 1 / 1.1;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+}
+
+.spotlightMain > img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-bottom: none;
   padding: 1rem;
 }
 
-.spotlightMain img {
+.spotReflection {
+  height: 60px;
+  overflow: hidden;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-top: none;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.38) 0%, transparent 100%);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.38) 0%, transparent 100%);
+  margin-bottom: 1rem;
+}
+
+.spotReflection img {
   width: 100%;
-  height: 100%;
+  height: 120px;
   object-fit: contain;
+  padding: 0 1rem;
+  transform: scaleY(-1);
+  transform-origin: top center;
+  mix-blend-mode: multiply;
+  opacity: 0.55;
 }
 
 .spotlightSide {
@@ -178,14 +200,21 @@
   gap: 1rem;
 }
 
-.spotlightSide img {
+.spotSideImg {
+  border-radius: var(--radius-md);
+  background: #fff;
+  border: 1px solid var(--color-border);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spotSideImg img {
   width: 100%;
   aspect-ratio: 1;
   object-fit: contain;
-  border-radius: var(--radius-md);
-  background: var(--color-section-bg);
-  border: 1px solid var(--color-border);
-  padding: 0.5rem;
+  mix-blend-mode: multiply;
 }
 
 .spotTag {
@@ -254,8 +283,14 @@
 }
 
 .whyIcon {
-  font-size: 2.5rem;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: rgba(14, 124, 197, 0.08);
+  color: var(--color-primary);
   margin-bottom: 1rem;
 }
 

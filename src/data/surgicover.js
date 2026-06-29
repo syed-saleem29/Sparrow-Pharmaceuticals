@@ -12,7 +12,7 @@ export const variants = [
   {
     id: 'chocolate',
     name: 'Chocolate',
-    folder: 'chocolate',
+    folder: 'Chocolate',
     imageCount: 5,
     accentColor: '#5C3317',
     bgColor: '#FDF5F0',
@@ -21,13 +21,13 @@ export const variants = [
   },
   {
     id: 'dryfruits',
-    name: 'Dry Fruits',
-    folder: 'dry fuits',
-    imageCount: 4,
+    name: 'Diabetic Cover',
+    folder: 'Dry Fruits',
+    imageCount: 5,
     accentColor: '#8B6914',
     bgColor: '#F9F5EC',
     description:
-      'A naturally inspired premium flavour with the warmth of mixed dry fruits — ideal for patients who prefer a lighter, less sweet taste during peri-operative recovery.',
+      'Specially formulated for diabetic patients — a dry fruits flavour with zero added sucrose, supporting glycaemic control while delivering the same clinically proven peri-operative nutritional support.',
   },
 ]
 

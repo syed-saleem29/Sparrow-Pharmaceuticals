@@ -6,8 +6,8 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={`container ${styles.inner}`}>
         <div className={styles.brand}>
-          <span className={styles.logo}>Sparrow <em>Pharma</em></span>
-          <p>Quality healthcare products for a better tomorrow.</p>
+          <span className={styles.logo}>Sparrow <em>Pharmaceuticals</em></span>
+          <p>Evidence-based peri-operative nutrition for better surgical outcomes.</p>
         </div>
 
         <div className={styles.links}>

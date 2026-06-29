@@ -1,9 +1,9 @@
-Redirect surgicover.com to https://sparrowpharma.in/surgicover
+Redirect surgicover.com to https://sparrowpharmaceuticals.in/surgicover
 -------------------------------------------------------------------
 
-Home Page : https://sparrowpharma.in
+Home Page : https://sparrowpharmaceuticals.in
 
-Product Page : https://sparrowpharma.in/surgicover
+Product Page : https://sparrowpharmaceuticals.in/surgicover
 
 Contact Form
 

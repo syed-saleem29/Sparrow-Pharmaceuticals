@@ -25,15 +25,13 @@ export default function Header() {
             Home
           </NavLink>
 
-          <div className={styles.dropdown}>
-            <span className={styles.navLink}>Products ▾</span>
-            <div className={styles.dropdownMenu}>
-              <Link to="/products/surgicover" className={styles.dropdownItem} onClick={close}>
-                <strong>Surgicover</strong>
-                <small>Peri-Operative Nutrition</small>
-              </Link>
-            </div>
-          </div>
+          <NavLink
+            to="/products"
+            className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ''}`}
+            onClick={close}
+          >
+            Products
+          </NavLink>
 
           <NavLink
             to="/blog"

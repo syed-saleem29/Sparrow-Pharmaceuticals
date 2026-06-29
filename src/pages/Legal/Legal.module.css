@@ -1,0 +1,96 @@
+.hero {
+  background: linear-gradient(135deg, #e8f4fd 0%, #eaf8f0 100%);
+  padding: 3.5rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  color: var(--color-light-text);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1rem 4rem;
+}
+
+.updated {
+  font-size: 0.8rem;
+  color: var(--color-light-text);
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.wrap h2 {
+  font-size: 1.25rem;
+  margin: 2.5rem 0 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--color-section-bg);
+  color: var(--color-dark-text);
+}
+
+.wrap h3 {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--color-dark-text);
+  margin: 1.5rem 0 0.4rem;
+}
+
+.wrap p {
+  color: var(--color-light-text);
+  font-size: 0.92rem;
+  line-height: 1.85;
+  margin-bottom: 0.9rem;
+}
+
+.wrap ul, .wrap ol {
+  color: var(--color-light-text);
+  font-size: 0.92rem;
+  line-height: 1.8;
+  margin: 0.25rem 0 1rem 1.5rem;
+}
+
+.wrap li {
+  margin-bottom: 0.4rem;
+}
+
+.wrap strong {
+  color: var(--color-dark-text);
+  font-weight: 600;
+}
+
+.contact {
+  background: var(--color-section-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 2rem;
+  margin-top: 3rem;
+}
+
+.contact h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-family: var(--font-heading);
+  color: var(--color-dark-text);
+}
+
+.contact p {
+  margin: 0;
+  font-size: 0.88rem;
+}
+
+.contact a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.contact a:hover { text-decoration: underline; }

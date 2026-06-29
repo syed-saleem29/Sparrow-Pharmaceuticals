@@ -28,7 +28,7 @@ export default function Contact() {
             <h2>Get in Touch</h2>
             <div className={styles.infoItem}>
               <strong>Email</strong>
-              <span>info@sparrowpharma.in</span>
+              <span>info@sparrowpharmaceuticals.in</span>
             </div>
             <div className={styles.infoItem}>
               <strong>Phone</strong>

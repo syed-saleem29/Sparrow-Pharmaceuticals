@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { MessageCircle, X, Send } from 'lucide-react'
 import styles from './ChatBot.module.css'
 
 export default function ChatBot() {
@@ -10,16 +11,18 @@ export default function ChatBot() {
         <div className={styles.window}>
           <div className={styles.windowHeader}>
             <span>Chat with us</span>
-            <button onClick={() => setOpen(false)} aria-label="Close chat">✕</button>
+            <button onClick={() => setOpen(false)} aria-label="Close chat">
+              <X size={18} />
+            </button>
           </div>
           <div className={styles.body}>
             <p className={styles.botMsg}>
-              Hi! 👋 Welcome to Sparrow Pharma. How can we help you today?
+              Hi! Welcome to Sparrow Pharma. How can we help you today?
             </p>
           </div>
           <div className={styles.inputRow}>
             <input type="text" placeholder="Type a message…" />
-            <button>Send</button>
+            <button aria-label="Send"><Send size={16} /></button>
           </div>
         </div>
       )}
@@ -28,7 +31,7 @@ export default function ChatBot() {
         onClick={() => setOpen(!open)}
         aria-label="Open chat"
       >
-        💬
+        {open ? <X size={22} /> : <MessageCircle size={22} />}
       </button>
     </div>
   )
