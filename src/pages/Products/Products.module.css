@@ -132,3 +132,9 @@
 .card:hover .viewBtn {
   letter-spacing: 0.02em;
 }
+
+@media (max-width: 400px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

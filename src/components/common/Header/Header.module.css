@@ -99,6 +99,19 @@
 @media (max-width: 768px) {
   .menuBtn {
     display: flex;
+    padding: 10px;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logoIcon {
+    height: 38px;
+  }
+
+  .logoText {
+    font-size: 0.88rem;
   }
 
   .nav {
@@ -122,7 +135,7 @@
 
   .navLink {
     width: 100%;
-    padding: 0.75rem 0;
+    padding: 0.9rem 0;
     border-bottom: 1px solid var(--color-border);
     font-size: 1rem;
   }
@@ -131,7 +144,25 @@
     margin-top: 1rem;
     text-align: center;
     width: 100%;
-    padding: 0.75rem;
+    padding: 0.85rem;
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .inner {
+    height: 60px;
+  }
+
+  .logoIcon {
+    height: 30px;
+  }
+
+  .logoText {
+    font-size: 0.75rem;
+  }
+
+  .nav {
+    top: 60px;
   }
 }

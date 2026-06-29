@@ -291,7 +291,7 @@
   border-radius: var(--radius-md);
   background: rgba(14, 124, 197, 0.08);
   color: var(--color-primary);
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem;
 }
 
 .whyCard h3 {
@@ -448,8 +448,12 @@
 
 @media (max-width: 600px) {
   .hero {
-    padding: 5rem 0;
+    padding: 3.5rem 0;
     min-height: unset;
+  }
+
+  .heroVisual {
+    display: none;
   }
 
   .spotlightImages {
@@ -463,5 +467,13 @@
   .statsGrid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+  }
+
+  .statItem strong {
+    font-size: 1.5rem;
+  }
+
+  .ctaBanner {
+    padding: 4rem 0;
   }
 }
