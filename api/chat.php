@@ -2,6 +2,15 @@
 error_reporting(0);
 ini_set('display_errors', '0');
 
+// Catch PHP fatal errors and return JSON instead of empty response
+register_shutdown_function(function () {
+    $e = error_get_last();
+    if ($e && in_array($e['type'], [E_ERROR, E_PARSE, E_CORE_ERROR, E_COMPILE_ERROR])) {
+        if (!headers_sent()) header('Content-Type: application/json');
+        echo json_encode(['reply' => 'PHP fatal: ' . $e['message'] . ' (line ' . $e['line'] . ')']);
+    }
+});
+
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST, OPTIONS');
@@ -139,7 +148,7 @@ foreach ($history as $h) {
 $messages[] = ['role' => 'user', 'content' => $message];
 
 $payload = json_encode([
-    'model'       => 'llama-3.1-8b-instant',
+    'model'       => 'llama-3.1-70b-versatile',
     'messages'    => $messages,
     'max_tokens'  => 250,
     'temperature' => 0.65,
