@@ -120,28 +120,33 @@ if (!$message) {
     exit;
 }
 
-// Build conversation history for Gemini
-$contents = [];
+// Build conversation history in OpenAI format (Groq is OpenAI-compatible)
+$messages = [['role' => 'system', 'content' => $SYSTEM_PROMPT]];
 foreach ($history as $h) {
     if (!empty($h['role']) && !empty($h['text'])) {
-        $contents[] = ['role' => $h['role'], 'parts' => [['text' => $h['text']]]];
+        $role = ($h['role'] === 'model') ? 'assistant' : $h['role'];
+        $messages[] = ['role' => $role, 'content' => $h['text']];
     }
 }
-$contents[] = ['role' => 'user', 'parts' => [['text' => $message]]];
+$messages[] = ['role' => 'user', 'content' => $message];
 
 $payload = json_encode([
-    'system_instruction' => ['parts' => [['text' => $SYSTEM_PROMPT]]],
-    'contents'           => $contents,
-    'generationConfig'   => ['maxOutputTokens' => 250, 'temperature' => 0.65],
+    'model'       => 'llama-3.1-8b-instant',
+    'messages'    => $messages,
+    'max_tokens'  => 250,
+    'temperature' => 0.65,
 ]);
 
-$url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=$API_KEY";
+$url = "https://api.groq.com/openai/v1/chat/completions";
 
 $ch = curl_init($url);
 curl_setopt_array($ch, [
     CURLOPT_POST           => true,
     CURLOPT_POSTFIELDS     => $payload,
-    CURLOPT_HTTPHEADER     => ['Content-Type: application/json'],
+    CURLOPT_HTTPHEADER     => [
+        'Content-Type: application/json',
+        "Authorization: Bearer $API_KEY",
+    ],
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_TIMEOUT        => 15,
 ]);
@@ -164,7 +169,7 @@ if (!empty($data['error'])) {
     exit;
 }
 
-$reply = $data['candidates'][0]['content']['parts'][0]['text']
+$reply = $data['choices'][0]['message']['content']
       ?? "I'm having trouble responding right now. Please contact us at info@sparrowpharmaceuticals.in or call +91 80748 33565.";
 
 echo json_encode(['reply' => trim($reply)]);
