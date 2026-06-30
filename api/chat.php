@@ -27,8 +27,65 @@ if (!file_exists(__DIR__ . '/config.php')) {
 require_once __DIR__ . '/config.php';
 // ─────────────────────────────────────────────────────────────────────────────
 
+// ─── Select which knowledge sections are relevant to the question ─────────────
+function selectSections($question, $sections) {
+    $q = strtolower($question);
+
+    $map = [
+        'Department Applications' => [
+            'ortho','knee','hip','acl','tka','tha','urology','prostat','ent','tonsil',
+            'dental','jaw','cardiac','heart','sternotomy','vascular','oncol','cancer',
+            'neuro','brain','plastic','flap','graft','gynae','hysterectomy','gi','bowel',
+            'colectomy','hernia','laparotomy','department','which surgery','applicable',
+            'which patient','which case'
+        ],
+        'Dosing Protocols' => [
+            'dose','dosing','how much','how many','serving','scoop','times a day',
+            'frequency','when to take','how to take','tube','syringe','tid','bid','qid',
+            'pre-op','post-op','prehabilitation','pre op','post op'
+        ],
+        'Safety and Contraindications' => [
+            'safe','safety','ckd','kidney','allerg','diabeti','lactose','contraindic',
+            'side effect','npo','anaesth','hot water','temperature','milk','soy',
+            'forbidden','avoid','restrict','caution','warning','cardiac diet'
+        ],
+        'How Surgicover Compares' => [
+            'compare','versus','vs','ensure','pentasure','resource','better than',
+            'difference','competitor','alternative','other brand','similar product'
+        ],
+        'Pricing and How to Order' => [
+            'price','pricing','cost','order','buy','purchase','procurement','bulk',
+            'hospital supply','contact','quote','how to get','where to buy','stock'
+        ],
+    ];
+
+    // Always include FAQ and Pricing (short, broadly useful)
+    $always = ['Frequently Asked Questions', 'Pricing and How to Order'];
+    $matched = [];
+
+    foreach ($sections as $s) {
+        if (empty($s['chatbot'])) continue;
+        $title = $s['title'];
+        if (in_array($title, $always)) { $matched[$title] = $s; continue; }
+        if (!isset($map[$title])) continue;
+        foreach ($map[$title] as $kw) {
+            if (strpos($q, $kw) !== false) { $matched[$title] = $s; break; }
+        }
+    }
+
+    // Fallback: if only FAQ+Pricing matched, add Departments too (covers most generic questions)
+    if (count($matched) <= 2) {
+        foreach ($sections as $s) {
+            if (!empty($s['chatbot'])) $matched[$s['title']] = $s;
+        }
+    }
+
+    return array_values($matched);
+}
+// ─────────────────────────────────────────────────────────────────────────────
+
 // ─── Build product knowledge from data/products.json ─────────────────────────
-function buildProductKnowledge() {
+function buildProductKnowledge($question = '') {
     $path = __DIR__ . '/../data/products.json';
     if (!file_exists($path)) return "No product data found.";
 
@@ -44,14 +101,9 @@ function buildProductKnowledge() {
         $out .= "Order URL: {$p['order_url']}\n";
 
         if (!empty($p['variants'])) {
-            $out .= "Variants / Flavours:\n";
-            foreach ($p['variants'] as $v) {
-                $out .= "  - {$v['name']}: {$v['description']}\n";
-            }
-        }
-
-        if (!empty($p['preparation'])) {
-            $out .= "Preparation: {$p['preparation']}\n";
+            $out .= "Variants: ";
+            $vnames = array_map(fn($v) => $v['name'], $p['variants']);
+            $out .= implode(', ', $vnames) . "\n";
         }
 
         if (!empty($p['nutrition_per_20g_serving'])) {
@@ -62,41 +114,23 @@ function buildProductKnowledge() {
                 . "L-Arginine " . ($n['L_Arginine'] ?? '') . ", "
                 . "L-Leucine " . ($n['L_Leucine'] ?? '') . ", "
                 . "Vitamin C " . ($n['Vitamin_C'] ?? '') . ", "
-                . "Fat " . ($n['fat'] ?? '') . ", "
-                . "Zero added sucrose"
-                . "\n";
-        }
-
-        if (!empty($p['clinical_use'])) {
-            $out .= "Clinical use:\n";
-            foreach ($p['clinical_use'] as $phase => $desc) {
-                $label = ucwords(str_replace('_', ' ', $phase));
-                $out .= "  - $label: $desc\n";
-            }
+                . "Fat " . ($n['fat'] ?? '') . ", Zero added sucrose\n";
         }
 
         if (!empty($p['key_clinical_points'])) {
-            $out .= "Key clinical points:\n";
+            $out .= "Key facts:\n";
             foreach ($p['key_clinical_points'] as $point) {
                 $out .= "  - $point\n";
             }
         }
 
-        if (!empty($p['ingredients'])) {
-            $out .= "Ingredients: {$p['ingredients']}\n";
-        }
-
         if (!empty($p['preparation_warnings'])) {
-            $out .= "Preparation warnings: {$p['preparation_warnings']}\n";
-        }
-
-        if (!empty($p['regulatory_label'])) {
-            $out .= "Regulatory / label notes: {$p['regulatory_label']}\n";
+            $out .= "Warning: {$p['preparation_warnings']}\n";
         }
 
         if (!empty($p['knowledge_sections'])) {
-            foreach ($p['knowledge_sections'] as $section) {
-                if (empty($section['chatbot'])) continue;
+            $relevant = selectSections($question, $p['knowledge_sections']);
+            foreach ($relevant as $section) {
                 $out .= "\n--- {$section['title']} ---\n";
                 $out .= $section['content'] . "\n";
             }
@@ -109,6 +143,18 @@ function buildProductKnowledge() {
 }
 // ─────────────────────────────────────────────────────────────────────────────
 
+// Read the user's message first so we can select relevant knowledge sections
+$input   = json_decode(file_get_contents('php://input'), true);
+$message = trim($input['message'] ?? '');
+$history = $input['history'] ?? [];
+
+if (!$message) {
+    http_response_code(400);
+    echo json_encode(['error' => 'No message provided']);
+    exit;
+}
+
+// Build system prompt using only the knowledge sections relevant to this message
 $SYSTEM_PROMPT = <<<PROMPT
 You are the Sparrow Assistant, the helpful chatbot for Sparrow Pharmaceuticals' website (sparrowpharmaceuticals.in). You help visitors — mainly hospital procurement teams, surgeons, and clinical dietitians — learn about our products and guide them to order or contact the team.
 
@@ -121,7 +167,7 @@ COMPANY CONTACT:
 PRODUCT KNOWLEDGE:
 PROMPT;
 
-$SYSTEM_PROMPT .= "\n" . buildProductKnowledge();
+$SYSTEM_PROMPT .= "\n" . buildProductKnowledge($message);
 
 $SYSTEM_PROMPT .= "\n\nRULES:\n"
     . "- Be professional, warm, and concise (under 120 words per reply)\n"
@@ -130,18 +176,6 @@ $SYSTEM_PROMPT .= "\n\nRULES:\n"
     . "- If someone wants to speak to a person, give the phone numbers and email\n"
     . "- Do not invent any information not provided above\n"
     . "- Respond in the same language the user writes in";
-
-// ─────────────────────────────────────────────────────────────────────────────
-
-$input   = json_decode(file_get_contents('php://input'), true);
-$message = trim($input['message'] ?? '');
-$history = $input['history'] ?? [];
-
-if (!$message) {
-    http_response_code(400);
-    echo json_encode(['error' => 'No message provided']);
-    exit;
-}
 
 // Build conversation history in OpenAI format (Groq is OpenAI-compatible)
 $messages = [['role' => 'system', 'content' => $SYSTEM_PROMPT]];
