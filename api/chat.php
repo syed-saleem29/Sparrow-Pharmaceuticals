@@ -47,7 +47,7 @@ function ruleBasedReply($msg) {
 
     // Variants / flavours
     if (preg_match('/\b(variant|flavour|flavor|chocolate|vanilla|dry fruit|diabetic cover|types|available in|options)\b/', $q))
-        return "Surgicover comes in 4 variants:\n• Vanilla — smooth, ideal for general compliance\n• Chocolate — for reduced appetite or taste changes\n• Diabetic Cover — zero sucrose, safe for diabetic patients\n• Dry Fruits — mild flavour for post-op nausea or anorexia";
+        return "Surgicover is available in 3 variants:\n• Vanilla — smooth, creamy; ideal for general patient compliance\n• Chocolate — rich flavour for patients with reduced appetite or taste changes\n• Diabetic Cover (Dry Fruits) — zero added sucrose, sweetened with sucralose; safe for Type 1 and Type 2 diabetic patients; comes in Dry Fruits flavour only";
 
     // Diabetic / sugar
     if (preg_match('/\b(diabet|sugar|sucrose|glycaem|glycemic|insulin|blood glucose)\b/', $q))
@@ -91,7 +91,7 @@ function ruleBasedReply($msg) {
 
     // What is / about / general
     if (preg_match('/\b(what is|tell me|about|surgicover|explain|overview|describe)\b/', $q))
-        return "Surgicover is a peri-operative clinical nutrition supplement by Sparrow Pharmaceuticals. It supports surgical patients before surgery (prehabilitation), after surgery (recovery), and during home healing.\n\nKey features:\n• L-Arginine 200mg — wound healing\n• L-Leucine 100mg — muscle preservation\n• Zero added sucrose — safe for diabetics\n• PDCAAS 1.0 protein quality\n• 4 variants: Vanilla, Chocolate, Diabetic Cover, Dry Fruits\n\nAsk me about dosing, safety, departments, or how to order!";
+        return "Surgicover is a peri-operative clinical nutrition supplement by Sparrow Pharmaceuticals. It supports surgical patients before surgery (prehabilitation), after surgery (recovery), and during home healing.\n\nKey features:\n• L-Arginine 200mg — wound healing\n• L-Leucine 100mg — muscle preservation\n• Zero added sucrose — safe for diabetics\n• PDCAAS 1.0 protein quality\n• 3 variants: Vanilla, Chocolate, Diabetic Cover (Dry Fruits flavour)\n\nAsk me about dosing, safety, departments, or how to order!";
 
     // Default
     return "I don't have a specific answer for that right now. For detailed queries please contact the team:\n+91 80748 33565  |  +91 63007 92061\ninfo@sparrowpharmaceuticals.in\n\nYou can also ask me about: variants, dosing, safety, ordering, or how Surgicover compares to other supplements.";
