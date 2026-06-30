@@ -179,10 +179,9 @@ if ($err) {
 
 $data  = json_decode($response, true);
 
-// Surface Gemini API errors so they are visible during debugging
 if (!empty($data['error'])) {
     http_response_code(500);
-    echo json_encode(['reply' => 'API error: ' . ($data['error']['message'] ?? 'Unknown error from Gemini.')]);
+    echo json_encode(['reply' => 'API error: ' . ($data['error']['message'] ?? 'Unknown API error.')]);
     exit;
 }
 
