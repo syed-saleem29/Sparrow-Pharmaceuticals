@@ -18,13 +18,84 @@ header('Access-Control-Allow-Headers: Content-Type');
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') { exit(0); }
 
-// ─── GEMINI API KEY ───────────────────────────────────────────────────────────
 if (!file_exists(__DIR__ . '/config.php')) {
     http_response_code(500);
     echo json_encode(['reply' => 'API error: config.php not found on server. Create api/config.php with your Groq API key.']);
     exit;
 }
 require_once __DIR__ . '/config.php';
+
+// ─── Rule-based fallback (used when Groq rate limit is hit) ──────────────────
+function ruleBasedReply($msg) {
+    $q = strtolower(trim($msg));
+
+    // Greetings
+    if (preg_match('/^(hi|hello|hey|good morning|good afternoon|namaste|helo|hii)\b/', $q))
+        return "Hello! I'm the Sparrow Assistant. Ask me anything about Surgicover — variants, dosing, safety, clinical use, or how to order. I'm happy to help!";
+
+    // Order / purchase
+    if (preg_match('/\b(order|buy|purchase|where to get|how to get|stock)\b/', $q))
+        return "To place an order, fill in our order form at sparrowpharmaceuticals.in/order, or contact the team:\n+91 80748 33565  |  +91 63007 92061\ninfo@sparrowpharmaceuticals.in";
+
+    // Pricing
+    if (preg_match('/\b(price|pricing|cost|rate|how much|mrp|quote|bulk)\b/', $q))
+        return "For institutional or bulk pricing quotes please contact us directly:\n+91 80748 33565  |  +91 63007 92061\ninfo@sparrowpharmaceuticals.in\nWe handle B2B procurement for hospitals, surgical centres, and dietitians.";
+
+    // Contact
+    if (preg_match('/\b(contact|phone|call|email|speak|talk|person|team|reach)\b/', $q))
+        return "You can reach the Sparrow Pharmaceuticals team at:\n+91 80748 33565\n+91 63007 92061\ninfo@sparrowpharmaceuticals.in\nOr visit sparrowpharmaceuticals.in/contact";
+
+    // Variants / flavours
+    if (preg_match('/\b(variant|flavour|flavor|chocolate|vanilla|dry fruit|diabetic cover|types|available in|options)\b/', $q))
+        return "Surgicover comes in 4 variants:\n• Vanilla — smooth, ideal for general compliance\n• Chocolate — for reduced appetite or taste changes\n• Diabetic Cover — zero sucrose, safe for diabetic patients\n• Dry Fruits — mild flavour for post-op nausea or anorexia";
+
+    // Diabetic / sugar
+    if (preg_match('/\b(diabet|sugar|sucrose|glycaem|glycemic|insulin|blood glucose)\b/', $q))
+        return "Yes — Surgicover is safe for diabetic patients. It contains zero added sucrose and uses sucralose as sweetener (GI = 0, non-caloric). The Diabetic Cover variant is specifically designed for Type 1 and Type 2 diabetic surgical patients. It will not raise blood glucose.";
+
+    // Lactose / milk / whey
+    if (preg_match('/\b(lactose|milk|dairy|whey|intoleran)\b/', $q))
+        return "Surgicover contains less than 0.1g lactose per 20g serving — far below the 12g clinical threshold. It is based on Soya Protein Isolate (naturally lactose-free) and is safe for post-operative patients with secondary lactose intolerance.";
+
+    // CKD / kidney
+    if (preg_match('/\b(ckd|kidney|renal|nephr)\b/', $q))
+        return "In CKD Stage 3 or higher, Surgicover must be used under guidance of a nephrologist or dietitian — protein, phosphorus, and calcium all need monitoring. It is not contraindicated but requires careful oversight.";
+
+    // Safety / allergens
+    if (preg_match('/\b(safe|safety|contraindic|allergen|allerg|side effect|avoid|caution|warning)\b/', $q))
+        return "Safe for: diabetic patients, secondary lactose intolerance, ENT/dental/cardiac patients.\nCaution: CKD Stage 3+ — monitor protein and electrolytes.\nNot for: parenteral/IV use; consumption within 2 hrs of anaesthesia (NPO window).\nAllergens: Contains Milk and Soy.\nDo NOT mix above 40°C / 104°F.";
+
+    // Temperature / mixing / preparation
+    if (preg_match('/\b(hot|boil|temp|mix|warm|tea|dissolve|prepar)\b/', $q))
+        return "Mix 1 heaped scoop (20g) in 150–200ml of lukewarm water or milk. Do NOT use hot or boiling liquids — above 40°C / 104°F it damages proteins and vitamins. Stir until dissolved and consume immediately.";
+
+    // Dosing / serving / when to take
+    if (preg_match('/\b(dose|dosing|how much|how many|serving|scoop|times|frequency|when|start|pre.?op|post.?op|prehab)\b/', $q))
+        return "Dosing guide:\n• Pre-surgery (5–7 days before): 2 servings/day\n• Post-op Day 2–5: 2 servings/day\n• Post-op Day 6+: 1–2 servings/day\n• Major surgery (oncology, ortho, GI): 3–4 servings/day\n• Home recovery: 1–2 servings/day for 14–30 days\n\n1 serving = 1 heaped scoop (20g) in 150–200ml lukewarm water or milk.";
+
+    // Nutrition / protein / ingredients
+    if (preg_match('/\b(nutrition|protein|calorie|kcal|ingredient|arginine|leucine|vitamin|mineral|calcium|phosphorus|fat|carb)\b/', $q))
+        return "Per 20g serving:\n• 75.64 kcal\n• 6g protein (PDCAAS 1.0 — highest quality)\n• L-Arginine 200mg — wound healing and nitric oxide\n• L-Leucine 100mg — muscle preservation\n• Vitamin C 32mg (40% RDA) — collagen synthesis\n• 14 vitamins and minerals including B-complex, Vitamin D, Iron, Copper, Manganese\n• Zero added sucrose | 0.19g fat";
+
+    // Department / surgery type
+    if (preg_match('/\b(ortho|knee|hip|urology|prostat|ent|tonsil|dental|jaw|cardiac|heart|vascular|oncol|cancer|neuro|brain|plastic|flap|gynae|hysterectomy|bowel|colectomy|hernia|laparotomy|department|which surgery|applicable|general surgery)\b/', $q))
+        return "Surgicover is used across all surgical departments:\n• Orthopaedics (ACL, THA, TKA) — muscle & bone\n• Urology/Prostatectomy — L-Arginine for microperfusion\n• General Surgery — gut barrier, fascial collagen\n• Gynaecology/Hysterectomy — pelvic floor healing\n• Oncology — counters cancer cachexia\n• GI Surgery — prevents hypoalbuminaemia\n• Neurosurgery/TBI — cerebral perfusion, B-vitamins\n• Vascular — ischaemia-reperfusion protection\n• Cardiothoracic/Sternotomy — Vitamin D for sternal healing\n• Plastics/Free Flap — flap microperfusion\n• ENT/Tonsillectomy — smooth liquid for painful swallowing\n• Dental/Jaw Wiring — liquid nutrition through wired jaws";
+
+    // Comparison / competitors
+    if (preg_match('/\b(compar|versus|vs\.?|ensure|pentasure|resource|nestle|better|different|alternative|other brand)\b/', $q))
+        return "Surgicover vs competitors:\n• vs Ensure HP — no free L-Arginine or L-Leucine; contains sucrose\n• vs PentaSure HP — whey-based (lactose risk); contains fructose and maltodextrin\n• vs Resource HP (Nestle) — whey + high-GI maltodextrin; no surgical amino acid spike\n\nSurgicover is the only supplement with dual L-Arginine (200mg) + L-Leucine (100mg) per serving, zero sucrose, and a lactose-compatible SPI protein matrix — purpose-built for surgery.";
+
+    // ERAS / protocol
+    if (preg_match('/\b(eras|protocol|clinical|evidence|study|guideline)\b/', $q))
+        return "Surgicover is aligned with ERAS (Enhanced Recovery After Surgery) protocols across all major surgical departments. It supports prehabilitation (pre-op), soft diet transition (post-op Days 2–5), and extended home recovery (14–30 days post-discharge).";
+
+    // What is / about / general
+    if (preg_match('/\b(what is|tell me|about|surgicover|explain|overview|describe)\b/', $q))
+        return "Surgicover is a peri-operative clinical nutrition supplement by Sparrow Pharmaceuticals. It supports surgical patients before surgery (prehabilitation), after surgery (recovery), and during home healing.\n\nKey features:\n• L-Arginine 200mg — wound healing\n• L-Leucine 100mg — muscle preservation\n• Zero added sucrose — safe for diabetics\n• PDCAAS 1.0 protein quality\n• 4 variants: Vanilla, Chocolate, Diabetic Cover, Dry Fruits\n\nAsk me about dosing, safety, departments, or how to order!";
+
+    // Default
+    return "I don't have a specific answer for that right now. For detailed queries please contact the team:\n+91 80748 33565  |  +91 63007 92061\ninfo@sparrowpharmaceuticals.in\n\nYou can also ask me about: variants, dosing, safety, ordering, or how Surgicover compares to other supplements.";
+}
 // ─────────────────────────────────────────────────────────────────────────────
 
 // ─── Select which knowledge sections are relevant to the question ─────────────
@@ -212,20 +283,26 @@ $err      = curl_error($ch);
 curl_close($ch);
 
 if ($err) {
-    http_response_code(500);
-    echo json_encode(['reply' => "Sorry, I couldn't connect right now. Please call us on +91 80748 33565 or email info@sparrowpharmaceuticals.in"]);
+    echo json_encode(['reply' => ruleBasedReply($message)]);
     exit;
 }
 
 $data  = json_decode($response, true);
 
 if (!empty($data['error'])) {
+    $errMsg = $data['error']['message'] ?? '';
+    $errCode = $data['error']['code'] ?? '';
+    // Rate limit (429) — fall back to rule-based engine silently
+    if ($errCode === 'rate_limit_exceeded' || stripos($errMsg, 'rate limit') !== false || stripos($errMsg, 'tokens per minute') !== false) {
+        echo json_encode(['reply' => ruleBasedReply($message)]);
+        exit;
+    }
     http_response_code(500);
-    echo json_encode(['reply' => 'API error: ' . ($data['error']['message'] ?? 'Unknown API error.')]);
+    echo json_encode(['reply' => 'API error: ' . $errMsg]);
     exit;
 }
 
 $reply = $data['choices'][0]['message']['content']
-      ?? "I'm having trouble responding right now. Please contact us at info@sparrowpharmaceuticals.in or call +91 80748 33565.";
+      ?? ruleBasedReply($message);
 
 echo json_encode(['reply' => trim($reply)]);
