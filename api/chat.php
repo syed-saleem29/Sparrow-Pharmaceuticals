@@ -7,7 +7,7 @@ header('Access-Control-Allow-Headers: Content-Type');
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') { exit(0); }
 
 // ─── GEMINI API KEY ───────────────────────────────────────────────────────────
-require_once __DIR__ . '/config.php'; // key stored in gitignored config.php
+require_once __DIR__ . '/config.php'; // key stored in gitignored config.php .
 // ─────────────────────────────────────────────────────────────────────────────
 
 // ─── Build product knowledge from data/products.json ─────────────────────────
