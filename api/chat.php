@@ -55,11 +55,16 @@ function buildProductKnowledge() {
         }
 
         if (!empty($p['nutrition_per_20g_serving'])) {
-            $out .= "Nutrition per 20g serving:\n";
-            foreach ($p['nutrition_per_20g_serving'] as $key => $val) {
-                $label = str_replace('_', ' ', $key);
-                $out .= "  - $label: $val\n";
-            }
+            $n = $p['nutrition_per_20g_serving'];
+            $out .= "Nutrition per 20g serving: "
+                . ($n['energy'] ?? '') . ", "
+                . ($n['protein'] ?? '') . ", "
+                . "L-Arginine " . ($n['L_Arginine'] ?? '') . ", "
+                . "L-Leucine " . ($n['L_Leucine'] ?? '') . ", "
+                . "Vitamin C " . ($n['Vitamin_C'] ?? '') . ", "
+                . "Fat " . ($n['fat'] ?? '') . ", "
+                . "Zero added sucrose"
+                . "\n";
         }
 
         if (!empty($p['clinical_use'])) {
@@ -91,6 +96,7 @@ function buildProductKnowledge() {
 
         if (!empty($p['knowledge_sections'])) {
             foreach ($p['knowledge_sections'] as $section) {
+                if (empty($section['chatbot'])) continue;
                 $out .= "\n--- {$section['title']} ---\n";
                 $out .= $section['content'] . "\n";
             }
@@ -148,9 +154,9 @@ foreach ($history as $h) {
 $messages[] = ['role' => 'user', 'content' => $message];
 
 $payload = json_encode([
-    'model'       => 'llama-3.3-70b-versatile',
+    'model'       => 'llama-3.1-8b-instant',
     'messages'    => $messages,
-    'max_tokens'  => 250,
+    'max_tokens'  => 200,
     'temperature' => 0.65,
 ]);
 
