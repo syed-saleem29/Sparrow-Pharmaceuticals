@@ -148,7 +148,7 @@ foreach ($history as $h) {
 $messages[] = ['role' => 'user', 'content' => $message];
 
 $payload = json_encode([
-    'model'       => 'llama-3.1-70b-versatile',
+    'model'       => 'llama-3.3-70b-versatile',
     'messages'    => $messages,
     'max_tokens'  => 250,
     'temperature' => 0.65,
