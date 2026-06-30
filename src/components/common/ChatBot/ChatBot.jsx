@@ -68,7 +68,15 @@ export default function ChatBot() {
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify({ message: trimmed, history }),
       })
-      const data = await res.json()
+      const text = await res.text()
+      let data
+      try {
+        data = JSON.parse(text)
+      } catch {
+        setMessages((prev) => [...prev, { from: 'bot', text: 'Server error: ' + text.slice(0, 300) }])
+        setLoading(false)
+        return
+      }
       setMessages((prev) => [
         ...prev,
         { from: 'bot', text: data.reply || "Sorry, I couldn't get a response. Please try again." },
