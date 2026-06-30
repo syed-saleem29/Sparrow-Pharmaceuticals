@@ -135,7 +135,7 @@ $payload = json_encode([
     'generationConfig'   => ['maxOutputTokens' => 250, 'temperature' => 0.65],
 ]);
 
-$url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=$API_KEY";
+$url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=$API_KEY";
 
 $ch = curl_init($url);
 curl_setopt_array($ch, [
