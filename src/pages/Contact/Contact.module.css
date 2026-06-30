@@ -41,8 +41,15 @@
   color: var(--color-primary);
 }
 
-.infoItem span {
+.infoItem span,
+.infoItem a {
   color: var(--color-light-text);
+  font-size: 0.95rem;
+  word-break: break-all;
+}
+
+.infoItem a:hover {
+  color: var(--color-primary);
 }
 
 .formWrap {
@@ -114,6 +121,7 @@
 .success p {
   color: var(--color-light-text);
 }
+
 
 @media (max-width: 768px) {
   .layout {

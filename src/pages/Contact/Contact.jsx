@@ -26,14 +26,18 @@ export default function Contact() {
         <div className={`container ${styles.layout}`}>
           <div className={styles.info}>
             <h2>Get in Touch</h2>
-            <div className={styles.infoItem}>
-              <strong>Email</strong>
-              <span>info@sparrowpharmaceuticals.in</span>
-            </div>
+
             <div className={styles.infoItem}>
               <strong>Phone</strong>
-              <span>+91 00000 00000</span>
+              <a href="tel:+918074833565">+91 80748 33565</a>
+              <a href="tel:+916300792061">+91 63007 92061</a>
             </div>
+
+            <div className={styles.infoItem}>
+              <strong>Email</strong>
+              <a href="mailto:info@sparrowpharmaceuticals.in">info@sparrowpharmaceuticals.in</a>
+            </div>
+
             <div className={styles.infoItem}>
               <strong>Address</strong>
               <span>Sparrow Pharmaceuticals, India</span>

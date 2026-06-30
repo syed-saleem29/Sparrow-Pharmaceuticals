@@ -162,7 +162,7 @@ export default function Terms() {
             <p>
               If you have any questions about these Terms of Use, please contact us:<br />
               <strong>Sparrow Pharmaceuticals</strong><br />
-              Email: <a href="mailto:legal@sparrowpharmaceuticals.in">legal@sparrowpharmaceuticals.in</a><br />
+              Email: <a href="mailto:admin@sparrowpharmaceuticals.in">admin@sparrowpharmaceuticals.in</a><br />
               Website: <a href="/contact">sparrowpharmaceuticals.in/contact</a>
             </p>
           </div>

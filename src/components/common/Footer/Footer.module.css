@@ -6,7 +6,7 @@
 
 .inner {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1.4fr;
   gap: 3rem;
   padding-bottom: 3rem;
 }
@@ -49,6 +49,7 @@
   font-size: 0.9rem;
   color: #aaa;
   transition: color var(--transition);
+  word-break: break-all;
 }
 
 .links a:hover {

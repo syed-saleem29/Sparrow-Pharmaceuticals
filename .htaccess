@@ -1,15 +1,22 @@
 AddType image/svg+xml .svg
 AddType image/png .png
 AddType image/x-icon .ico
+AddType text/css .css
+AddType application/javascript .js
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
-  # If the file exists in dist/, serve it from dist/
-  RewriteCond %{DOCUMENT_ROOT}/dist%{REQUEST_URI} -f
-  RewriteRule ^(.*)$ dist/$1 [L]
+  # PHP files (e.g. /api/chat.php) — serve directly, do not rewrite
+  RewriteRule \.php$ - [L]
 
-  # Everything else (React routes) → dist/index.html
+  # Static asset bundles (JS/CSS with hashed names)
+  RewriteRule ^(assets/.+)$ dist/$1 [L,NC]
+
+  # All other static file types (images, fonts, ico, etc.)
+  RewriteRule ^(.+\.(ico|png|jpg|jpeg|webp|gif|svg|woff|woff2|ttf|eot|json|txt|xml|map))$ dist/$1 [L,NC]
+
+  # React SPA — everything else serves dist/index.html
   RewriteRule ^ dist/index.html [L]
 </IfModule>

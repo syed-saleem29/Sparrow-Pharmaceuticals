@@ -15,6 +15,7 @@
   margin: 0 auto;
 }
 
+
 .formWrap {
   max-width: 760px;
   margin: 0 auto;
@@ -91,6 +92,15 @@
 .submitBtn:hover {
   opacity: 0.88;
   transform: translateY(-2px);
+}
+
+.orderNote {
+  font-size: 0.82rem;
+  color: var(--color-light-text);
+}
+
+.orderNote a {
+  color: var(--color-primary);
 }
 
 .success {

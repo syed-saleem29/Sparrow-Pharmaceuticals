@@ -138,7 +138,7 @@ export default function Privacy() {
             <p>
               For any privacy-related enquiries, data access requests, or complaints, please contact:<br />
               <strong>Sparrow Pharmaceuticals</strong><br />
-              Email: <a href="mailto:privacy@sparrowpharmaceuticals.in">privacy@sparrowpharmaceuticals.in</a><br />
+              Email: <a href="mailto:admin@sparrowpharmaceuticals.in">admin@sparrowpharmaceuticals.in</a><br />
               Website: <a href="/contact">sparrowpharmaceuticals.in/contact</a>
             </p>
           </div>

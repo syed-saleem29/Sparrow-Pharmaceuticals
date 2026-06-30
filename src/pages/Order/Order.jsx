@@ -114,6 +114,9 @@ export default function Order() {
                 <button type="submit" className={styles.submitBtn}>
                   Submit Order Request
                 </button>
+                <p className={styles.orderNote}>
+                  For order queries, email <a href="mailto:orders@sparrowpharmaceuticals.in">orders@sparrowpharmaceuticals.in</a>
+                </p>
               </form>
             )}
           </div>

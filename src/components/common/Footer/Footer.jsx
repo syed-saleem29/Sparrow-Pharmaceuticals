@@ -24,6 +24,13 @@ export default function Footer() {
           <Link to="/privacy">Privacy Policy</Link>
           <Link to="/terms">Terms of Use</Link>
         </div>
+
+        <div className={styles.links}>
+          <h4>Contact</h4>
+          <a href="tel:+918074833565">+91 80748 33565</a>
+          <a href="tel:+916300792061">+91 63007 92061</a>
+          <a href="mailto:info@sparrowpharmaceuticals.in">info@sparrowpharmaceuticals.in</a>
+        </div>
       </div>
       <div className={styles.bottom}>
         <span>© {new Date().getFullYear()} Sparrow Pharmaceuticals. All rights reserved.</span>
