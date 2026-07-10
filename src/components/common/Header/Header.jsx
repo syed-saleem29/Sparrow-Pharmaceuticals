@@ -42,6 +42,14 @@ export default function Header() {
           </NavLink>
 
           <NavLink
+            to="/dietitian"
+            className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ''}`}
+            onClick={close}
+          >
+            Dietitian
+          </NavLink>
+
+          <NavLink
             to="/contact"
             className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ''}`}
             onClick={close}

@@ -13,6 +13,7 @@ import BlogPost from './pages/BlogPost/BlogPost'
 import Order from './pages/Order/Order'
 import Privacy from './pages/Privacy/Privacy'
 import Terms from './pages/Terms/Terms'
+import Dietitian from './pages/Dietitian/Dietitian'
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/order" element={<Order />} />
+            <Route path="/dietitian" element={<Dietitian />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="*" element={<Navigate to="/" replace />} />
