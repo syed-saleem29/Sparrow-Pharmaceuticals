@@ -1,7 +1,18 @@
 .hero {
   background: var(--color-section-bg);
   padding: 4rem 0;
-  text-align: center;
+  overflow: hidden;
+}
+
+.heroInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.heroText {
+  text-align: left;
 }
 
 .badge {
@@ -22,11 +33,23 @@
   margin-bottom: 0.75rem;
 }
 
-.hero p {
+.heroText p {
   color: var(--color-light-text);
-  max-width: 560px;
-  margin: 0 auto;
   line-height: 1.7;
+}
+
+.heroImage {
+  display: flex;
+  justify-content: center;
+}
+
+.heroImage img {
+  width: 100%;
+  max-width: 420px;
+  height: 480px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
 }
 
 /* ── Highlight cards ─────────────────────────────────────── */
@@ -189,6 +212,20 @@
 @media (max-width: 900px) {
   .highlights {
     grid-template-columns: 1fr;
+  }
+
+  .heroInner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .heroText {
+    text-align: center;
+  }
+
+  .heroImage img {
+    height: 320px;
+    max-width: 100%;
   }
 }
 

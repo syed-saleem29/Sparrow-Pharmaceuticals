@@ -41,14 +41,19 @@ export default function Dietitian() {
   return (
     <>
       <section className={styles.hero}>
-        <div className="container">
-          <span className={styles.badge}>Clinical Nutrition</span>
-          <h1>Meet Our Dietitian</h1>
-          <p>
-            Have a clinical nutrition question? Our specialist dietitian is available to guide
-            surgeons, hospital procurement teams, and clinical staff on peri-operative nutrition
-            and Surgicover integration.
-          </p>
+        <div className={`container ${styles.heroInner}`}>
+          <div className={styles.heroText}>
+            <span className={styles.badge}>Clinical Nutrition</span>
+            <h1>Meet Our Dietitian</h1>
+            <p>
+              Have a clinical nutrition question? Our specialist dietitian is available to guide
+              surgeons, hospital procurement teams, and clinical staff on peri-operative nutrition
+              and Surgicover integration.
+            </p>
+          </div>
+          <div className={styles.heroImage}>
+            <img src="/images/dietitian-hero.webp" alt="Sparrow Pharmaceuticals clinical dietitian" />
+          </div>
         </div>
       </section>
 
