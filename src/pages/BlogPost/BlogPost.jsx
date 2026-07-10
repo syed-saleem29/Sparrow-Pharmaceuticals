@@ -1,4 +1,5 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { Dna, Microscope, ShieldCheck, Activity, ArrowLeft } from 'lucide-react'
 import { blogPosts } from '../../data/blogPosts'
 import styles from './BlogPost.module.css'
@@ -42,8 +43,34 @@ export default function BlogPost() {
   const prevPost = blogPosts[currentIndex - 1] || null
   const nextPost = blogPosts[currentIndex + 1] || null
 
+  const postUrl = `https://sparrowpharmaceuticals.in/blog/${post.slug}`
+
   return (
     <>
+      <Helmet>
+        <title>{post.title} | Sparrow Pharmaceuticals Clinical Blog</title>
+        <meta name="description" content={post.excerpt} />
+        <meta name="keywords" content={`${post.title}, Surgicover, peri-operative nutrition, surgical recovery supplement, clinical nutrition India, Sparrow Pharmaceuticals, ${post.category}`} />
+        <link rel="canonical" href={postUrl} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:url" content={postUrl} />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": post.title,
+          "description": post.excerpt,
+          "author": { "@type": "Organization", "name": "Sparrow Pharmaceuticals" },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Sparrow Pharmaceuticals",
+            "logo": { "@type": "ImageObject", "url": "https://sparrowpharmaceuticals.in/Logo Without BG.png" }
+          },
+          "url": postUrl,
+          "mainEntityOfPage": postUrl
+        })}</script>
+      </Helmet>
       <div className={styles.hero} style={{ background: post.bannerColor }}>
         <div className="container">
           <Link to="/blog" className={styles.back}>

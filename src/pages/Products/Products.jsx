@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import styles from './Products.module.css'
 
 const products = [
@@ -16,6 +17,12 @@ const products = [
 export default function Products() {
   return (
     <>
+      <Helmet>
+        <title>Clinical Nutrition Products | Surgicover | Sparrow Pharmaceuticals India</title>
+        <meta name="description" content="Sparrow Pharmaceuticals' product range for peri-operative clinical nutrition. Surgicover — surgical recovery supplement with L-Arginine, L-Leucine, and zero added sucrose. For hospitals and surgical centres across India." />
+        <meta name="keywords" content="Sparrow Pharmaceuticals products, Surgicover, clinical nutrition supplement India, peri-operative supplement, surgical nutrition products, hospital supplement India" />
+        <link rel="canonical" href="https://sparrowpharmaceuticals.in/products" />
+      </Helmet>
       <section className={styles.hero}>
         <div className="container">
           <h1>Our Products</h1>

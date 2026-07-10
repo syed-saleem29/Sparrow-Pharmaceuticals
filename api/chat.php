@@ -172,9 +172,11 @@ function buildProductKnowledge($question = '') {
         $out .= "Order URL: {$p['order_url']}\n";
 
         if (!empty($p['variants'])) {
-            $out .= "Variants: ";
-            $vnames = array_map(fn($v) => $v['name'], $p['variants']);
-            $out .= implode(', ', $vnames) . "\n";
+            $count = count($p['variants']);
+            $out .= "Variants ($count total — there are ONLY $count variants, not more):\n";
+            foreach ($p['variants'] as $v) {
+                $out .= "  - {$v['name']}: {$v['description']}\n";
+            }
         }
 
         if (!empty($p['nutrition_per_20g_serving'])) {

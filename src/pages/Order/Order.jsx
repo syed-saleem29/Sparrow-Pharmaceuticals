@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { CheckCircle } from 'lucide-react'
 import styles from './Order.module.css'
 
@@ -31,6 +32,11 @@ export default function Order() {
 
   return (
     <>
+      <Helmet>
+        <title>Order Surgicover | Hospital and Bulk Procurement | Sparrow Pharmaceuticals</title>
+        <meta name="description" content="Order Surgicover peri-operative nutrition supplement for your hospital, surgical centre, or clinic. B2B procurement available. Contact Sparrow Pharmaceuticals at +91 80748 33565." />
+        <link rel="canonical" href="https://sparrowpharmaceuticals.in/order" />
+      </Helmet>
       <section className={styles.hero}>
         <div className="container">
           <h1>Place an Order</h1>

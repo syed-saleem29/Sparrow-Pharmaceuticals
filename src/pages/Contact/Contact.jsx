@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import styles from './Contact.module.css'
 import Button from '../../components/common/Button/Button'
 
@@ -15,6 +16,11 @@ export default function Contact() {
 
   return (
     <>
+      <Helmet>
+        <title>Contact Sparrow Pharmaceuticals | Surgicover Enquiries India</title>
+        <meta name="description" content="Contact Sparrow Pharmaceuticals for Surgicover enquiries, hospital procurement, bulk orders, or clinical nutrition queries. Call +91 80748 33565 or email info@sparrowpharmaceuticals.in." />
+        <link rel="canonical" href="https://sparrowpharmaceuticals.in/contact" />
+      </Helmet>
       <section className={styles.hero}>
         <div className="container">
           <h1>Contact Us</h1>

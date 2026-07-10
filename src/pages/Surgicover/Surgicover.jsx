@@ -19,12 +19,68 @@ export default function Surgicover() {
   return (
     <>
       <Helmet>
-        <title>Surgicover — Peri-Operative Clinical Nutrition Supplement | Sparrow Pharmaceuticals</title>
-        <meta name="description" content="Surgicover by Sparrow Pharmaceuticals: peri-operative nutrition supplement with L-Arginine (200mg), L-Leucine (100mg), zero added sucrose, PDCAAS 1.0 protein. 3 variants: Vanilla, Chocolate, Diabetic Cover. For surgical recovery across all departments." />
+        <title>Surgicover — Peri-Operative Clinical Nutrition Supplement | Sparrow Pharmaceuticals India</title>
+        <meta name="description" content="Surgicover: India's peri-operative clinical nutrition supplement. L-Arginine 200mg (wound healing), L-Leucine 100mg (muscle preservation), 6g PDCAAS 1.0 soya protein, zero added sucrose, 14 vitamins and minerals per 20g serving. ERAS-aligned. 3 variants: Vanilla, Chocolate, Diabetic Cover (Dry Fruits). For hospitals, surgeons, and clinical dietitians." />
+        <meta name="keywords" content="Surgicover, peri-operative nutrition supplement, surgical recovery supplement, post-operative protein supplement India, L-Arginine wound healing, L-Leucine muscle preservation, PDCAAS 1.0 protein, zero sucrose protein supplement, diabetic surgical supplement, ERAS nutrition supplement, soya protein surgery, clinical nutrition supplement India, Sparrow Pharmaceuticals, post surgery protein India, pre-operative supplement, surgical prehabilitation, muscle wasting prevention surgery, wound healing supplement India, collagen synthesis supplement, nitric oxide supplement surgery" />
         <link rel="canonical" href="https://sparrowpharmaceuticals.in/products/surgicover" />
-        <meta property="og:title" content="Surgicover — Peri-Operative Nutrition | Sparrow Pharmaceuticals" />
-        <meta property="og:description" content="India's peri-operative nutrition supplement for surgical recovery. L-Arginine, L-Leucine, zero sucrose. Available for hospitals and surgical centres." />
+        <meta property="og:title" content="Surgicover — Peri-Operative Nutrition Supplement | Sparrow Pharmaceuticals" />
+        <meta property="og:description" content="India's surgical recovery supplement with L-Arginine, L-Leucine, zero sucrose and PDCAAS 1.0 protein. Available for hospitals and surgical centres." />
         <meta property="og:url" content="https://sparrowpharmaceuticals.in/products/surgicover" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sparrowpharmaceuticals.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://sparrowpharmaceuticals.in/products" },
+            { "@type": "ListItem", "position": 3, "name": "Surgicover", "item": "https://sparrowpharmaceuticals.in/products/surgicover" }
+          ]
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is Surgicover?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Surgicover is a peri-operative clinical nutrition supplement by Sparrow Pharmaceuticals, formulated to support patients before and after surgery. It contains L-Arginine (200mg), L-Leucine (100mg), 6g PDCAAS 1.0 soya-milk protein, zero added sucrose, and 14 vitamins and minerals per 20g serving." }
+            },
+            {
+              "@type": "Question",
+              "name": "Is Surgicover safe for diabetic patients?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Surgicover contains zero added sucrose and is sweetened exclusively with sucralose (GI=0, non-caloric). The Diabetic Cover variant (Dry Fruits flavour) is specifically designed for Type 1 and Type 2 diabetic and pre-diabetic surgical patients. It will not raise blood glucose." }
+            },
+            {
+              "@type": "Question",
+              "name": "When should patients start taking Surgicover?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Start 5-7 days before elective surgery (prehabilitation phase), 2 servings per day. Resume from post-operative Day 2 after the clear liquid phase. Continue 1-2 servings per day for 14-30 days post-discharge during home recovery." }
+            },
+            {
+              "@type": "Question",
+              "name": "What are the variants of Surgicover?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Surgicover is available in 3 variants: Vanilla (smooth, for general compliance), Chocolate (for reduced appetite or taste changes), and Diabetic Cover in Dry Fruits flavour (zero sucrose, for diabetic and pre-diabetic surgical patients)." }
+            },
+            {
+              "@type": "Question",
+              "name": "How is Surgicover different from Ensure HP or PentaSure HP?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Surgicover is the only supplement in this category with a dual free-form L-Arginine (200mg) + L-Leucine (100mg) spike per serving for direct NOS and mTORC1 activation. Unlike Ensure HP (contains sucrose, no free L-Arginine/L-Leucine) and PentaSure HP (whey-based with fructose and maltodextrin), Surgicover uses lactose-compatible SPI protein and zero sucrose — purpose-built for the peri-operative window." }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the correct dosage for Surgicover?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Standard dose: 1 heaped scoop (20g) in 150-200ml lukewarm water or milk. Pre-surgery: 2 servings/day. Post-op Day 2-5: 2 servings/day. Post-op Day 6+: 1-2 servings/day. For major surgery (oncology, orthopaedic, GI): 3-4 servings/day providing 18-24g protein and 600-800mg L-Arginine." }
+            },
+            {
+              "@type": "Question",
+              "name": "Can Surgicover be used after orthopaedic surgery?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Surgicover is widely used in orthopaedic surgery (ACL reconstruction, THA, TKA, joint replacement). L-Leucine activates mTORC1 to prevent disuse muscle atrophy during immobilisation. L-Arginine and Vitamin C drive collagen deposition for ligament and tendon repair. Vitamin D supports bone mineralisation." }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I order Surgicover for a hospital or clinic?",
+              "acceptedAnswer": { "@type": "Answer", "text": "For institutional or bulk procurement, contact Sparrow Pharmaceuticals at info@sparrowpharmaceuticals.in or call +91 80748 33565 / +91 63007 92061. You can also submit an order request at sparrowpharmaceuticals.in/order." }
+            }
+          ]
+        })}</script>
       </Helmet>
 
       {/* Hero */}
