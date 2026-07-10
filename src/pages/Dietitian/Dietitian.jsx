@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import styles from './Dietitian.module.css'
 import Button from '../../components/common/Button/Button'
 
@@ -40,6 +41,12 @@ export default function Dietitian() {
 
   return (
     <>
+      <Helmet>
+        <title>Consult Our Clinical Dietitian | Sparrow Pharmaceuticals</title>
+        <meta name="description" content="Consult Sparrow Pharmaceuticals' clinical dietitian for peri-operative nutrition guidance, Surgicover integration into ERAS protocols, and surgical nutrition support for hospitals and clinical teams." />
+        <link rel="canonical" href="https://sparrowpharmaceuticals.in/dietitian" />
+      </Helmet>
+
       <section className={styles.hero}>
         <div className={`container ${styles.heroInner}`}>
           <div className={styles.heroText}>

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { Dna, Microscope, ShieldCheck, Activity } from 'lucide-react'
 import { blogPosts } from '../../data/blogPosts'
 import styles from './Blog.module.css'
@@ -8,6 +9,11 @@ const iconMap = { Dna, Microscope, ShieldCheck, Activity }
 export default function Blog() {
   return (
     <>
+      <Helmet>
+        <title>Clinical Nutrition Blog — Surgicover | Sparrow Pharmaceuticals</title>
+        <meta name="description" content="Evidence-based articles on peri-operative nutrition, ERAS protocols, L-Arginine wound healing, soya vs whey protein, and glycaemic control in surgery. By Sparrow Pharmaceuticals." />
+        <link rel="canonical" href="https://sparrowpharmaceuticals.in/blog" />
+      </Helmet>
       <section className={styles.hero}>
         <div className="container">
           <h1>Clinical Insights</h1>

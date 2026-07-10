@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import Header from './components/common/Header/Header'
 import Footer from './components/common/Footer/Footer'
 import ChatBot from './components/common/ChatBot/ChatBot'
@@ -17,6 +18,7 @@ import Dietitian from './pages/Dietitian/Dietitian'
 
 export default function App() {
   return (
+    <HelmetProvider>
     <BrowserRouter>
       <ScrollToTop />
       <Header />
@@ -41,5 +43,6 @@ export default function App() {
       <Footer />
       <ChatBot />
     </BrowserRouter>
+    </HelmetProvider>
   )
 }

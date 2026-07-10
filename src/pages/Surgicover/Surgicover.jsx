@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { Zap, Dna, ShieldCheck, Microscope } from 'lucide-react'
 import { variants, keyFeatures, nutritionRows, instructions, ingredients } from '../../data/surgicover'
 import styles from './Surgicover.module.css'
@@ -17,6 +18,15 @@ export default function Surgicover() {
 
   return (
     <>
+      <Helmet>
+        <title>Surgicover — Peri-Operative Clinical Nutrition Supplement | Sparrow Pharmaceuticals</title>
+        <meta name="description" content="Surgicover by Sparrow Pharmaceuticals: peri-operative nutrition supplement with L-Arginine (200mg), L-Leucine (100mg), zero added sucrose, PDCAAS 1.0 protein. 3 variants: Vanilla, Chocolate, Diabetic Cover. For surgical recovery across all departments." />
+        <link rel="canonical" href="https://sparrowpharmaceuticals.in/products/surgicover" />
+        <meta property="og:title" content="Surgicover — Peri-Operative Nutrition | Sparrow Pharmaceuticals" />
+        <meta property="og:description" content="India's peri-operative nutrition supplement for surgical recovery. L-Arginine, L-Leucine, zero sucrose. Available for hospitals and surgical centres." />
+        <meta property="og:url" content="https://sparrowpharmaceuticals.in/products/surgicover" />
+      </Helmet>
+
       {/* Hero */}
       <section className={styles.hero}>
         <div className="container">

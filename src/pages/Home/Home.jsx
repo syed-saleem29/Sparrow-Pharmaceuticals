@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { Microscope, Dna, ShieldCheck, Building2 } from 'lucide-react'
 import styles from './Home.module.css'
 
@@ -40,6 +41,12 @@ const whyChoose = [
 export default function Home() {
   return (
     <>
+      <Helmet>
+        <title>Sparrow Pharmaceuticals | Surgicover — Peri-Operative Nutrition Supplement India</title>
+        <meta name="description" content="Sparrow Pharmaceuticals makes Surgicover — India's peri-operative clinical nutrition supplement for surgical recovery. L-Arginine, L-Leucine, zero sucrose. Trusted by surgeons and hospital dietitians." />
+        <link rel="canonical" href="https://sparrowpharmaceuticals.in/" />
+      </Helmet>
+
       {/* Hero */}
       <section className={styles.hero}>
         <div className={`container ${styles.heroInner}`}>
