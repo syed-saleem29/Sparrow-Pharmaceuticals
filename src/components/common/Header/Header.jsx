@@ -42,11 +42,11 @@ export default function Header() {
           </NavLink>
 
           <NavLink
-            to="/dietitian"
+            to="/dietician"
             className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ''}`}
             onClick={close}
           >
-            Dietitian
+            Dietician
           </NavLink>
 
           <NavLink

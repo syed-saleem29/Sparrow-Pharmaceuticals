@@ -35,7 +35,7 @@ const whyChoose = [
   { Icon: Microscope,  title: 'Clinically Formulated',   desc: 'Built on the science of ERAS protocols  evidence-based peri-operative nutrition to minimise catabolic depletion.' },
   { Icon: Dna,         title: 'PDCAAS 1.0 Protein',      desc: 'Hybrid soya-milk protein matrix with a perfect amino acid score, with superior post-operative GI tolerance vs whey.' },
   { Icon: ShieldCheck, title: 'Zero Added Sucrose',       desc: 'Acute post-operative hyperglycaemia is directly linked to surgical site infections. Surgicover eliminates added sucrose entirely.' },
-  { Icon: Building2,   title: 'B2B Healthcare Focus',     desc: 'Designed for hospitals, surgical centres, and clinical dietitians. Bulk supply, institutional pricing, and clinical support available.' },
+  { Icon: Building2,   title: 'B2B Healthcare Focus',     desc: 'Designed for hospitals, surgical centres, and clinical dieticians. Bulk supply, institutional pricing, and clinical support available.' },
 ]
 
 export default function Home() {
@@ -43,7 +43,7 @@ export default function Home() {
     <>
       <Helmet>
         <title>Sparrow Pharmaceuticals | Surgicover — Peri-Operative Nutrition Supplement India</title>
-        <meta name="description" content="Sparrow Pharmaceuticals manufactures Surgicover — India's peri-operative clinical nutrition supplement for surgical recovery. L-Arginine (200mg), L-Leucine (100mg), PDCAAS 1.0 soya protein, zero added sucrose. Trusted by surgeons, hospital dietitians, and procurement teams." />
+        <meta name="description" content="Sparrow Pharmaceuticals manufactures Surgicover — India's peri-operative clinical nutrition supplement for surgical recovery. L-Arginine (200mg), L-Leucine (100mg), PDCAAS 1.0 soya protein, zero added sucrose. Trusted by surgeons, hospital dieticians, and procurement teams." />
         <meta name="keywords" content="Sparrow Pharmaceuticals, Surgicover, peri-operative nutrition India, surgical nutrition supplement, post-operative supplement India, clinical nutrition supplement hospital, ERAS supplement India, surgical recovery supplement, L-Arginine wound healing, L-Leucine muscle, zero sucrose protein supplement" />
         <link rel="canonical" href="https://sparrowpharmaceuticals.in/" />
       </Helmet>

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
-import styles from './Dietitian.module.css'
+import styles from './Dietician.module.css'
 import Button from '../../components/common/Button/Button'
 
 const HIGHLIGHTS = [
@@ -12,7 +12,7 @@ const HIGHLIGHTS = [
   {
     icon: '📋',
     title: 'Product Integration Support',
-    body: 'Our dietitian helps hospital teams integrate Surgicover into existing ERAS and recovery protocols across all surgical departments.',
+    body: 'Our dietician helps hospital teams integrate Surgicover into existing ERAS and recovery protocols across all surgical departments.',
   },
   {
     icon: '💬',
@@ -21,7 +21,7 @@ const HIGHLIGHTS = [
   },
 ]
 
-export default function Dietitian() {
+export default function Dietician() {
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -42,24 +42,24 @@ export default function Dietitian() {
   return (
     <>
       <Helmet>
-        <title>Consult Our Clinical Dietitian | Sparrow Pharmaceuticals</title>
-        <meta name="description" content="Consult Sparrow Pharmaceuticals' clinical dietitian for peri-operative nutrition guidance, Surgicover integration into ERAS protocols, and surgical nutrition support for hospitals and clinical teams." />
-        <link rel="canonical" href="https://sparrowpharmaceuticals.in/dietitian" />
+        <title>Consult Our Clinical Dietician | Sparrow Pharmaceuticals</title>
+        <meta name="description" content="Consult Sparrow Pharmaceuticals' clinical dietician for peri-operative nutrition guidance, Surgicover integration into ERAS protocols, and surgical nutrition support for hospitals and clinical teams." />
+        <link rel="canonical" href="https://sparrowpharmaceuticals.in/dietician" />
       </Helmet>
 
       <section className={styles.hero}>
         <div className={`container ${styles.heroInner}`}>
           <div className={styles.heroText}>
             <span className={styles.badge}>Clinical Nutrition</span>
-            <h1>Meet Our Dietitian</h1>
+            <h1>Meet Our Dietician</h1>
             <p>
-              Have a clinical nutrition question? Our specialist dietitian is available to guide
+              Have a clinical nutrition question? Our specialist dietician is available to guide
               surgeons, hospital procurement teams, and clinical staff on peri-operative nutrition
               and Surgicover integration.
             </p>
           </div>
           <div className={styles.heroImage}>
-            <img src="/images/dietitian-hero.webp" alt="Sparrow Pharmaceuticals clinical dietitian" />
+            <img src="/images/dietician-hero.webp" alt="Sparrow Pharmaceuticals clinical dietician" />
           </div>
         </div>
       </section>
@@ -83,7 +83,7 @@ export default function Dietitian() {
           <div className={styles.info}>
             <h2>Get in Touch</h2>
             <p className={styles.infoSubtext}>
-              Fill in the form and our dietitian will get back to you within 24 hours.
+              Fill in the form and our dietician will get back to you within 24 hours.
             </p>
 
             <div className={styles.infoItem}>
@@ -104,7 +104,7 @@ export default function Dietitian() {
 
             <div className={styles.infoItem}>
               <strong>Available For</strong>
-              <span>Surgeons, clinical dietitians, hospital procurement teams, nursing staff</span>
+              <span>Surgeons, clinical dieticians, hospital procurement teams, nursing staff</span>
             </div>
           </div>
 
@@ -113,7 +113,7 @@ export default function Dietitian() {
               <div className={styles.success}>
                 <span>✅</span>
                 <h3>Query Received!</h3>
-                <p>Thank you for reaching out. Our dietitian will respond within 24 hours.</p>
+                <p>Thank you for reaching out. Our dietician will respond within 24 hours.</p>
               </div>
             ) : (
               <form className={styles.form} onSubmit={handleSubmit}>
@@ -175,7 +175,7 @@ export default function Dietitian() {
                   >
                     <option value="">Select your role…</option>
                     <option>Surgeon</option>
-                    <option>Clinical Dietitian</option>
+                    <option>Clinical Dietician</option>
                     <option>Hospital Procurement</option>
                     <option>Nursing Staff</option>
                     <option>Patient / Caregiver</option>

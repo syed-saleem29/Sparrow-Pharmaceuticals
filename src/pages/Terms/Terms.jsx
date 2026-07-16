@@ -30,7 +30,7 @@ export default function Terms() {
           </p>
           <p>
             This Website is intended for use by healthcare professionals, hospital procurement teams,
-            institutional buyers, clinical dietitians, and adult consumers in India.
+            institutional buyers, clinical dieticians, and adult consumers in India.
           </p>
 
           <h2>2. Medical and Clinical Disclaimer</h2>
@@ -44,7 +44,7 @@ export default function Terms() {
           </p>
           <p>
             Surgicover is a nutritional supplement. It is not a medicine, drug, or medical device.
-            Patients should consult their treating physician, surgeon, or clinical dietitian before
+            Patients should consult their treating physician, surgeon, or clinical dietician before
             commencing any nutritional supplementation protocol, particularly in the context of surgery,
             chronic illness, or pre-existing medical conditions.
           </p>

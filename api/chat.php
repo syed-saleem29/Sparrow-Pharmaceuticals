@@ -39,7 +39,7 @@ function ruleBasedReply($msg) {
 
     // Pricing
     if (preg_match('/\b(price|pricing|cost|rate|how much|mrp|quote|bulk)\b/', $q))
-        return "For institutional or bulk pricing quotes please contact us directly:\n+91 80748 33565  |  +91 63007 92061\ninfo@sparrowpharmaceuticals.in\nWe handle B2B procurement for hospitals, surgical centres, and dietitians.";
+        return "For institutional or bulk pricing quotes please contact us directly:\n+91 80748 33565  |  +91 63007 92061\ninfo@sparrowpharmaceuticals.in\nWe handle B2B procurement for hospitals, surgical centres, and dieticians.";
 
     // Contact
     if (preg_match('/\b(contact|phone|call|email|speak|talk|person|team|reach)\b/', $q))
@@ -59,7 +59,7 @@ function ruleBasedReply($msg) {
 
     // CKD / kidney
     if (preg_match('/\b(ckd|kidney|renal|nephr)\b/', $q))
-        return "In CKD Stage 3 or higher, Surgicover must be used under guidance of a nephrologist or dietitian — protein, phosphorus, and calcium all need monitoring. It is not contraindicated but requires careful oversight.";
+        return "In CKD Stage 3 or higher, Surgicover must be used under guidance of a nephrologist or dietician — protein, phosphorus, and calcium all need monitoring. It is not contraindicated but requires careful oversight.";
 
     // Safety / allergens
     if (preg_match('/\b(safe|safety|contraindic|allergen|allerg|side effect|avoid|caution|warning)\b/', $q))
@@ -229,7 +229,7 @@ if (!$message) {
 
 // Build system prompt using only the knowledge sections relevant to this message
 $SYSTEM_PROMPT = <<<PROMPT
-You are the Sparrow Assistant, the helpful chatbot for Sparrow Pharmaceuticals' website (sparrowpharmaceuticals.in). You help visitors — mainly hospital procurement teams, surgeons, and clinical dietitians — learn about our products and guide them to order or contact the team.
+You are the Sparrow Assistant, the helpful chatbot for Sparrow Pharmaceuticals' website (sparrowpharmaceuticals.in). You help visitors — mainly hospital procurement teams, surgeons, and clinical dieticians — learn about our products and guide them to order or contact the team.
 
 COMPANY CONTACT:
 - Phone: +91 80748 33565 and +91 63007 92061

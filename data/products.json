@@ -5,7 +5,7 @@
       "name": "Surgicover",
       "type": "Peri-Operative Clinical Nutrition Supplement",
       "description": "A specialised peri-operative enteral supplement formulated to optimise surgical recovery, preserve lean muscle mass, and accelerate wound healing across all phases of surgery. It serves as a metabolic bridge throughout the surgical timeline — from pre-operative prehabilitation through home recovery.",
-      "target_audience": "Hospitals, surgical centres, clinical dietitians, surgeons, B2B procurement teams, and post-surgical patients",
+      "target_audience": "Hospitals, surgical centres, clinical dieticians, surgeons, B2B procurement teams, and post-surgical patients",
       "order_url": "/order",
       "variants": [
         {
@@ -82,12 +82,12 @@
         {
           "title": "Frequently Asked Questions",
           "chatbot": true,
-          "content": "Q: Safe for diabetics? A: Yes — zero sucrose, sucralose GI=0. Diabetic Cover variant is specifically for diabetic/pre-diabetic surgical patients. Q: Lactose concern from Skimmed Milk Powder? A: Lactose per serving <0.1g — far below the 12g clinical threshold. Safe for post-op patients with secondary lactose intolerance. Q: Is 6g protein per serving enough? A: Yes — designed for fractionated dosing (3-4 servings/day = 18-24g protein) to avoid gastric distension and amino acid saturation. Q: Can it be mixed with hot water or tea? A: No — use lukewarm/room-temperature liquids only (below 40 C / 104 F). Q: When to start? A: 5-7 days before surgery; resume from post-op Day 2; continue 14-30 days post-discharge. Q: CKD patients? A: Usable but requires nephrologist/dietitian supervision to manage protein, phosphorus, and calcium. Q: Tube feeding? A: Can be given via syringe or feeding tube for ENT/dental patients — not a complete tube-feed formula. Q: Does it cause constipation? A: No — SPI does not delay gastric emptying; suitable for gynaecological and abdominal surgery patients. Q: Why soya instead of whey? A: SPI is naturally lactose-free and PDCAAS 1.0 equivalent to whey. Post-op patients risk secondary lactose intolerance from whey. SPI also has natural anti-inflammatory properties."
+          "content": "Q: Safe for diabetics? A: Yes — zero sucrose, sucralose GI=0. Diabetic Cover variant is specifically for diabetic/pre-diabetic surgical patients. Q: Lactose concern from Skimmed Milk Powder? A: Lactose per serving <0.1g — far below the 12g clinical threshold. Safe for post-op patients with secondary lactose intolerance. Q: Is 6g protein per serving enough? A: Yes — designed for fractionated dosing (3-4 servings/day = 18-24g protein) to avoid gastric distension and amino acid saturation. Q: Can it be mixed with hot water or tea? A: No — use lukewarm/room-temperature liquids only (below 40 C / 104 F). Q: When to start? A: 5-7 days before surgery; resume from post-op Day 2; continue 14-30 days post-discharge. Q: CKD patients? A: Usable but requires nephrologist/dietician supervision to manage protein, phosphorus, and calcium. Q: Tube feeding? A: Can be given via syringe or feeding tube for ENT/dental patients — not a complete tube-feed formula. Q: Does it cause constipation? A: No — SPI does not delay gastric emptying; suitable for gynaecological and abdominal surgery patients. Q: Why soya instead of whey? A: SPI is naturally lactose-free and PDCAAS 1.0 equivalent to whey. Post-op patients risk secondary lactose intolerance from whey. SPI also has natural anti-inflammatory properties."
         },
         {
           "title": "Pricing and How to Order",
           "chatbot": true,
-          "content": "For institutional pricing, hospital procurement quotes, or bulk orders, contact the team at info@sparrowpharmaceuticals.in or call +91 80748 33565 / +91 63007 92061. To place an order, use the order form at /order or email orders@sparrowpharmaceuticals.in. Handles B2B procurement for hospitals, surgical centres, and clinical dietitians."
+          "content": "For institutional pricing, hospital procurement quotes, or bulk orders, contact the team at info@sparrowpharmaceuticals.in or call +91 80748 33565 / +91 63007 92061. To place an order, use the order form at /order or email orders@sparrowpharmaceuticals.in. Handles B2B procurement for hospitals, surgical centres, and clinical dieticians."
         }
       ]
     }
