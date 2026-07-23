@@ -17,7 +17,7 @@ const HIGHLIGHTS = [
   {
     icon: '💬',
     title: 'Direct Consultation',
-    body: 'Reach out via the form below or contact us directly — we respond within 24 hours on all clinical queries.',
+    body: 'Reach out via the form below or contact us directly   we respond within 24 hours on all clinical queries.',
   },
 ]
 
@@ -52,11 +52,13 @@ export default function Dietician() {
           <div className={styles.heroText}>
             <span className={styles.badge}>Clinical Nutrition</span>
             <h1>Meet Our Dietician</h1>
+            <p className={styles.doctorName}>Khadija Tabassum</p>
             <p>
-              Have a clinical nutrition question? Our specialist dietician is available to guide
+              Have a clinical nutrition question? Khadija is available to guide
               surgeons, hospital procurement teams, and clinical staff on peri-operative nutrition
               and Surgicover integration.
             </p>
+            <a href="tel:+917815885166" className={styles.heroPhone}>📞 +91 78158 85166</a>
           </div>
           <div className={styles.heroImage}>
             <img src="/images/dietician-hero.webp" alt="Sparrow Pharmaceuticals clinical dietician" />

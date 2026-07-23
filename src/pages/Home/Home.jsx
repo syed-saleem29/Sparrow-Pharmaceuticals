@@ -42,8 +42,8 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Sparrow Pharmaceuticals | Surgicover — Peri-Operative Nutrition Supplement India</title>
-        <meta name="description" content="Sparrow Pharmaceuticals manufactures Surgicover — India's peri-operative clinical nutrition supplement for surgical recovery. L-Arginine (200mg), L-Leucine (100mg), PDCAAS 1.0 soya protein, zero added sucrose. Trusted by surgeons, hospital dieticians, and procurement teams." />
+        <title>Sparrow Pharmaceuticals | Surgicover   Peri-Operative Nutrition Supplement India</title>
+        <meta name="description" content="Sparrow Pharmaceuticals manufactures Surgicover   India's peri-operative clinical nutrition supplement for surgical recovery. L-Arginine (200mg), L-Leucine (100mg), PDCAAS 1.0 soya protein, zero added sucrose. Trusted by surgeons, hospital dieticians, and procurement teams." />
         <meta name="keywords" content="Sparrow Pharmaceuticals, Surgicover, peri-operative nutrition India, surgical nutrition supplement, post-operative supplement India, clinical nutrition supplement hospital, ERAS supplement India, surgical recovery supplement, L-Arginine wound healing, L-Leucine muscle, zero sucrose protein supplement" />
         <link rel="canonical" href="https://sparrowpharmaceuticals.in/" />
       </Helmet>
@@ -67,6 +67,9 @@ export default function Home() {
               </Link>
               <Link to="/contact">
                 <button className={styles.heroBtnOutline}>Contact Us</button>
+              </Link>
+              <Link to="/dietician">
+                <button className={styles.heroBtnOutline}>Meet Our Dietician</button>
               </Link>
             </div>
           </div>

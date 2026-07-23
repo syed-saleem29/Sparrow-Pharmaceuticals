@@ -33,6 +33,23 @@
   margin-bottom: 0.75rem;
 }
 
+.doctorName {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.heroPhone {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.heroPhone:hover { text-decoration: underline; }
+
 .heroText p {
   color: var(--color-light-text);
   line-height: 1.7;

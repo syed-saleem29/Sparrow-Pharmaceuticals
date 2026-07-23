@@ -15,6 +15,7 @@ import Order from './pages/Order/Order'
 import Privacy from './pages/Privacy/Privacy'
 import Terms from './pages/Terms/Terms'
 import Dietician from './pages/Dietician/Dietician'
+import DieticianPopup from './components/common/DieticianPopup/DieticianPopup'
 
 export default function App() {
   return (
@@ -42,6 +43,7 @@ export default function App() {
       </main>
       <Footer />
       <ChatBot />
+      <DieticianPopup />
     </BrowserRouter>
     </HelmetProvider>
   )
