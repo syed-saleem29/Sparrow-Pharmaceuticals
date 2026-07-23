@@ -62,13 +62,15 @@ export default function Home() {
               to optimise the surgical patient's metabolic state  before, during, and after surgery.
             </p>
             <div className={styles.heroActions}>
-              <Link to="/products/surgicover">
-                <button className={styles.heroBtnPrimary}>Explore Surgicover</button>
-              </Link>
-              <Link to="/contact">
-                <button className={styles.heroBtnOutline}>Contact Us</button>
-              </Link>
-              <Link to="/dietician">
+              <div className={styles.heroActionsRow}>
+                <Link to="/products/surgicover">
+                  <button className={styles.heroBtnPrimary}>Explore Surgicover</button>
+                </Link>
+                <Link to="/contact">
+                  <button className={styles.heroBtnOutline}>Contact Us</button>
+                </Link>
+              </div>
+              <Link to="/dietician" className={styles.heroWideLink}>
                 <button className={styles.heroBtnOutline}>Meet Our Dietician</button>
               </Link>
             </div>

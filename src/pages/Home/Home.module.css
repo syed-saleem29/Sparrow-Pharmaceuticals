@@ -50,8 +50,22 @@
 
 .heroActions {
   display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.heroActionsRow {
+  display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+.heroWideLink {
+  display: block;
+}
+
+.heroWideLink button {
+  width: 100%;
 }
 
 .heroBtnPrimary {
