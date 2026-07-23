@@ -10,7 +10,7 @@ export default function Blog() {
   return (
     <>
       <Helmet>
-        <title>Clinical Nutrition Blog — Surgicover | Sparrow Pharmaceuticals</title>
+        <title>Clinical Nutrition Blog   Surgicover | Sparrow Pharmaceuticals</title>
         <meta name="description" content="Evidence-based articles on peri-operative nutrition, ERAS protocols, L-Arginine wound healing, soya vs whey protein, and glycaemic control in surgery. By Sparrow Pharmaceuticals." />
         <link rel="canonical" href="https://sparrowpharmaceuticals.in/blog" />
       </Helmet>

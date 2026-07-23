@@ -31,7 +31,7 @@ function ruleBasedReply($msg) {
 
     // Greetings
     if (preg_match('/^(hi|hello|hey|good morning|good afternoon|namaste|helo|hii)\b/', $q))
-        return "Hello! I'm the Sparrow Assistant. Ask me anything about Surgicover — variants, dosing, safety, clinical use, or how to order. I'm happy to help!";
+        return "Hello! I'm the Sparrow Assistant. Ask me anything about Surgicover   variants, dosing, safety, clinical use, or how to order. I'm happy to help!";
 
     // Order / purchase
     if (preg_match('/\b(order|buy|purchase|where to get|how to get|stock)\b/', $q))
@@ -47,27 +47,27 @@ function ruleBasedReply($msg) {
 
     // Variants / flavours
     if (preg_match('/\b(variant|flavour|flavor|chocolate|vanilla|dry fruit|diabetic cover|types|available in|options)\b/', $q))
-        return "Surgicover is available in 3 variants:\n• Vanilla — smooth, creamy; ideal for general patient compliance\n• Chocolate — rich flavour for patients with reduced appetite or taste changes\n• Diabetic Cover (Dry Fruits) — zero added sucrose, sweetened with sucralose; safe for Type 1 and Type 2 diabetic patients; comes in Dry Fruits flavour only";
+        return "Surgicover is available in 3 variants:\n• Vanilla   smooth, creamy; ideal for general patient compliance\n• Chocolate   rich flavour for patients with reduced appetite or taste changes\n• Diabetic Cover (Dry Fruits)   zero added sucrose, sweetened with sucralose; safe for Type 1 and Type 2 diabetic patients; comes in Dry Fruits flavour only";
 
     // Diabetic / sugar
     if (preg_match('/\b(diabet|sugar|sucrose|glycaem|glycemic|insulin|blood glucose)\b/', $q))
-        return "Yes — Surgicover is safe for diabetic patients. It contains zero added sucrose and uses sucralose as sweetener (GI = 0, non-caloric). The Diabetic Cover variant is specifically designed for Type 1 and Type 2 diabetic surgical patients. It will not raise blood glucose.";
+        return "Yes   Surgicover is safe for diabetic patients. It contains zero added sucrose and uses sucralose as sweetener (GI = 0, non-caloric). The Diabetic Cover variant is specifically designed for Type 1 and Type 2 diabetic surgical patients. It will not raise blood glucose.";
 
     // Lactose / milk / whey
     if (preg_match('/\b(lactose|milk|dairy|whey|intoleran)\b/', $q))
-        return "Surgicover contains less than 0.1g lactose per 20g serving — far below the 12g clinical threshold. It is based on Soya Protein Isolate (naturally lactose-free) and is safe for post-operative patients with secondary lactose intolerance.";
+        return "Surgicover contains less than 0.1g lactose per 20g serving   far below the 12g clinical threshold. It is based on Soya Protein Isolate (naturally lactose-free) and is safe for post-operative patients with secondary lactose intolerance.";
 
     // CKD / kidney
     if (preg_match('/\b(ckd|kidney|renal|nephr)\b/', $q))
-        return "In CKD Stage 3 or higher, Surgicover must be used under guidance of a nephrologist or dietician — protein, phosphorus, and calcium all need monitoring. It is not contraindicated but requires careful oversight.";
+        return "In CKD Stage 3 or higher, Surgicover must be used under guidance of a nephrologist or dietician   protein, phosphorus, and calcium all need monitoring. It is not contraindicated but requires careful oversight.";
 
     // Safety / allergens
     if (preg_match('/\b(safe|safety|contraindic|allergen|allerg|side effect|avoid|caution|warning)\b/', $q))
-        return "Safe for: diabetic patients, secondary lactose intolerance, ENT/dental/cardiac patients.\nCaution: CKD Stage 3+ — monitor protein and electrolytes.\nNot for: parenteral/IV use; consumption within 2 hrs of anaesthesia (NPO window).\nAllergens: Contains Milk and Soy.\nDo NOT mix above 40°C / 104°F.";
+        return "Safe for: diabetic patients, secondary lactose intolerance, ENT/dental/cardiac patients.\nCaution: CKD Stage 3+   monitor protein and electrolytes.\nNot for: parenteral/IV use; consumption within 2 hrs of anaesthesia (NPO window).\nAllergens: Contains Milk and Soy.\nDo NOT mix above 40°C / 104°F.";
 
     // Temperature / mixing / preparation
     if (preg_match('/\b(hot|boil|temp|mix|warm|tea|dissolve|prepar)\b/', $q))
-        return "Mix 1 heaped scoop (20g) in 150–200ml of lukewarm water or milk. Do NOT use hot or boiling liquids — above 40°C / 104°F it damages proteins and vitamins. Stir until dissolved and consume immediately.";
+        return "Mix 1 heaped scoop (20g) in 150–200ml of lukewarm water or milk. Do NOT use hot or boiling liquids   above 40°C / 104°F it damages proteins and vitamins. Stir until dissolved and consume immediately.";
 
     // Dosing / serving / when to take
     if (preg_match('/\b(dose|dosing|how much|how many|serving|scoop|times|frequency|when|start|pre.?op|post.?op|prehab)\b/', $q))
@@ -75,15 +75,15 @@ function ruleBasedReply($msg) {
 
     // Nutrition / protein / ingredients
     if (preg_match('/\b(nutrition|protein|calorie|kcal|ingredient|arginine|leucine|vitamin|mineral|calcium|phosphorus|fat|carb)\b/', $q))
-        return "Per 20g serving:\n• 75.64 kcal\n• 6g protein (PDCAAS 1.0 — highest quality)\n• L-Arginine 200mg — wound healing and nitric oxide\n• L-Leucine 100mg — muscle preservation\n• Vitamin C 32mg (40% RDA) — collagen synthesis\n• 14 vitamins and minerals including B-complex, Vitamin D, Iron, Copper, Manganese\n• Zero added sucrose | 0.19g fat";
+        return "Per 20g serving:\n• 75.64 kcal\n• 6g protein (PDCAAS 1.0   highest quality)\n• L-Arginine 200mg   wound healing and nitric oxide\n• L-Leucine 100mg   muscle preservation\n• Vitamin C 32mg (40% RDA)   collagen synthesis\n• 14 vitamins and minerals including B-complex, Vitamin D, Iron, Copper, Manganese\n• Zero added sucrose | 0.19g fat";
 
     // Department / surgery type
     if (preg_match('/\b(ortho|knee|hip|urology|prostat|ent|tonsil|dental|jaw|cardiac|heart|vascular|oncol|cancer|neuro|brain|plastic|flap|gynae|hysterectomy|bowel|colectomy|hernia|laparotomy|department|which surgery|applicable|general surgery)\b/', $q))
-        return "Surgicover is used across all surgical departments:\n• Orthopaedics (ACL, THA, TKA) — muscle & bone\n• Urology/Prostatectomy — L-Arginine for microperfusion\n• General Surgery — gut barrier, fascial collagen\n• Gynaecology/Hysterectomy — pelvic floor healing\n• Oncology — counters cancer cachexia\n• GI Surgery — prevents hypoalbuminaemia\n• Neurosurgery/TBI — cerebral perfusion, B-vitamins\n• Vascular — ischaemia-reperfusion protection\n• Cardiothoracic/Sternotomy — Vitamin D for sternal healing\n• Plastics/Free Flap — flap microperfusion\n• ENT/Tonsillectomy — smooth liquid for painful swallowing\n• Dental/Jaw Wiring — liquid nutrition through wired jaws";
+        return "Surgicover is used across all surgical departments:\n• Orthopaedics (ACL, THA, TKA)   muscle & bone\n• Urology/Prostatectomy   L-Arginine for microperfusion\n• General Surgery   gut barrier, fascial collagen\n• Gynaecology/Hysterectomy   pelvic floor healing\n• Oncology   counters cancer cachexia\n• GI Surgery   prevents hypoalbuminaemia\n• Neurosurgery/TBI   cerebral perfusion, B-vitamins\n• Vascular   ischaemia-reperfusion protection\n• Cardiothoracic/Sternotomy   Vitamin D for sternal healing\n• Plastics/Free Flap   flap microperfusion\n• ENT/Tonsillectomy   smooth liquid for painful swallowing\n• Dental/Jaw Wiring   liquid nutrition through wired jaws";
 
     // Comparison / competitors
     if (preg_match('/\b(compar|versus|vs\.?|ensure|pentasure|resource|nestle|better|different|alternative|other brand)\b/', $q))
-        return "Surgicover vs competitors:\n• vs Ensure HP — no free L-Arginine or L-Leucine; contains sucrose\n• vs PentaSure HP — whey-based (lactose risk); contains fructose and maltodextrin\n• vs Resource HP (Nestle) — whey + high-GI maltodextrin; no surgical amino acid spike\n\nSurgicover is the only supplement with dual L-Arginine (200mg) + L-Leucine (100mg) per serving, zero sucrose, and a lactose-compatible SPI protein matrix — purpose-built for surgery.";
+        return "Surgicover vs competitors:\n• vs Ensure HP   no free L-Arginine or L-Leucine; contains sucrose\n• vs PentaSure HP   whey-based (lactose risk); contains fructose and maltodextrin\n• vs Resource HP (Nestle)   whey + high-GI maltodextrin; no surgical amino acid spike\n\nSurgicover is the only supplement with dual L-Arginine (200mg) + L-Leucine (100mg) per serving, zero sucrose, and a lactose-compatible SPI protein matrix   purpose-built for surgery.";
 
     // ERAS / protocol
     if (preg_match('/\b(eras|protocol|clinical|evidence|study|guideline)\b/', $q))
@@ -91,7 +91,7 @@ function ruleBasedReply($msg) {
 
     // What is / about / general
     if (preg_match('/\b(what is|tell me|about|surgicover|explain|overview|describe)\b/', $q))
-        return "Surgicover is a peri-operative clinical nutrition supplement by Sparrow Pharmaceuticals. It supports surgical patients before surgery (prehabilitation), after surgery (recovery), and during home healing.\n\nKey features:\n• L-Arginine 200mg — wound healing\n• L-Leucine 100mg — muscle preservation\n• Zero added sucrose — safe for diabetics\n• PDCAAS 1.0 protein quality\n• 3 variants: Vanilla, Chocolate, Diabetic Cover (Dry Fruits flavour)\n\nAsk me about dosing, safety, departments, or how to order!";
+        return "Surgicover is a peri-operative clinical nutrition supplement by Sparrow Pharmaceuticals. It supports surgical patients before surgery (prehabilitation), after surgery (recovery), and during home healing.\n\nKey features:\n• L-Arginine 200mg   wound healing\n• L-Leucine 100mg   muscle preservation\n• Zero added sucrose   safe for diabetics\n• PDCAAS 1.0 protein quality\n• 3 variants: Vanilla, Chocolate, Diabetic Cover (Dry Fruits flavour)\n\nAsk me about dosing, safety, departments, or how to order!";
 
     // Default
     return "I don't have a specific answer for that right now. For detailed queries please contact the team:\n+91 80748 33565  |  +91 63007 92061\ninfo@sparrowpharmaceuticals.in\n\nYou can also ask me about: variants, dosing, safety, ordering, or how Surgicover compares to other supplements.";
@@ -173,7 +173,7 @@ function buildProductKnowledge($question = '') {
 
         if (!empty($p['variants'])) {
             $count = count($p['variants']);
-            $out .= "Variants ($count total — there are ONLY $count variants, not more):\n";
+            $out .= "Variants ($count total   there are ONLY $count variants, not more):\n";
             foreach ($p['variants'] as $v) {
                 $out .= "  - {$v['name']}: {$v['description']}\n";
             }
@@ -229,7 +229,7 @@ if (!$message) {
 
 // Build system prompt using only the knowledge sections relevant to this message
 $SYSTEM_PROMPT = <<<PROMPT
-You are the Sparrow Assistant, the helpful chatbot for Sparrow Pharmaceuticals' website (sparrowpharmaceuticals.in). You help visitors — mainly hospital procurement teams, surgeons, and clinical dieticians — learn about our products and guide them to order or contact the team.
+You are the Sparrow Assistant, the helpful chatbot for Sparrow Pharmaceuticals' website (sparrowpharmaceuticals.in). You help visitors   mainly hospital procurement teams, surgeons, and clinical dieticians   learn about our products and guide them to order or contact the team.
 
 COMPANY CONTACT:
 - Phone: +91 80748 33565 and +91 63007 92061
@@ -294,7 +294,7 @@ $data  = json_decode($response, true);
 if (!empty($data['error'])) {
     $errMsg = $data['error']['message'] ?? '';
     $errCode = $data['error']['code'] ?? '';
-    // Rate limit (429) — fall back to rule-based engine silently
+    // Rate limit (429)   fall back to rule-based engine silently
     if ($errCode === 'rate_limit_exceeded' || stripos($errMsg, 'rate limit') !== false || stripos($errMsg, 'tokens per minute') !== false) {
         echo json_encode(['reply' => ruleBasedReply($message)]);
         exit;

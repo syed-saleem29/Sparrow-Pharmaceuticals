@@ -4,7 +4,7 @@
       "id": "surgicover",
       "name": "Surgicover",
       "type": "Peri-Operative Clinical Nutrition Supplement",
-      "description": "A specialised peri-operative enteral supplement formulated to optimise surgical recovery, preserve lean muscle mass, and accelerate wound healing across all phases of surgery. It serves as a metabolic bridge throughout the surgical timeline — from pre-operative prehabilitation through home recovery.",
+      "description": "A specialised peri-operative enteral supplement formulated to optimise surgical recovery, preserve lean muscle mass, and accelerate wound healing across all phases of surgery. It serves as a metabolic bridge throughout the surgical timeline   from pre-operative prehabilitation through home recovery.",
       "target_audience": "Hospitals, surgical centres, clinical dieticians, surgeons, B2B procurement teams, and post-surgical patients",
       "order_url": "/order",
       "variants": [
@@ -18,13 +18,13 @@
         },
         {
           "name": "Diabetic Cover (Dry Fruits)",
-          "description": "Available in Dry Fruits flavour only. Zero added sucrose, sweetened with sucralose — specifically safe for Type 1 and Type 2 diabetic and pre-diabetic surgical patients requiring strict glycaemic control. The mild, natural dry fruits taste also suits patients experiencing post-operative anorexia, nausea, or taste alterations."
+          "description": "Available in Dry Fruits flavour only. Zero added sucrose, sweetened with sucralose   specifically safe for Type 1 and Type 2 diabetic and pre-diabetic surgical patients requiring strict glycaemic control. The mild, natural dry fruits taste also suits patients experiencing post-operative anorexia, nausea, or taste alterations."
         }
       ],
       "preparation": "Measure 150ml of lukewarm water or milk into a clean container. Add exactly one heaped scoop (20g) of Surgicover powder. Stir or shake briskly until completely dissolved. Consume immediately after preparation. Recommended 1-2 servings daily or as directed by the attending clinical specialist.",
-      "preparation_warnings": "Do NOT mix with hot or boiling liquids — temperatures above 40C / 104F denature proteins and degrade heat-sensitive vitamins. Use only lukewarm or room-temperature liquids. Do NOT consume within 2 hours before anaesthesia (nil-by-mouth NPO window).",
+      "preparation_warnings": "Do NOT mix with hot or boiling liquids   temperatures above 40C / 104F denature proteins and degrade heat-sensitive vitamins. Use only lukewarm or room-temperature liquids. Do NOT consume within 2 hours before anaesthesia (nil-by-mouth NPO window).",
       "ingredients": "Soya Protein Isolate, Defatted Soya Flour, Skimmed Milk Powder, Sucralose (INS955), Di-basic Calcium Phosphate, Cyanocobalamin (B12), Thiamine Mononitrate (B1), Riboflavin (B2), Niacinamide (B3), Calcium D-Pantothenate (B5), Pyridoxine Hydrochloride (B6), Cholecalciferol (Vitamin D), Folic Acid (B9), Ascorbic Acid (Vitamin C), Ferric Ammonium Citrate (Iron), Manganese Sulphate, Copper Sulphate, L-Arginine, L-Leucine, Preservative INS211, Permitted Flavours.",
-      "regulatory_label": "CONTAINS NATURALLY OCCURRING SUGARS. Contains Milk and Soy allergens. Not for parenteral or IV use. Zero Added Sugar (Sucrose) claim is lawful under FSSAI Non-Addition of Sugars guidelines — naturally occurring lactose from Skimmed Milk Powder is present but <0.1g per serving.",
+      "regulatory_label": "CONTAINS NATURALLY OCCURRING SUGARS. Contains Milk and Soy allergens. Not for parenteral or IV use. Zero Added Sugar (Sucrose) claim is lawful under FSSAI Non-Addition of Sugars guidelines   naturally occurring lactose from Skimmed Milk Powder is present but <0.1g per serving.",
       "nutrition_per_20g_serving": {
         "energy": "75.64 kcal",
         "protein": "6.0g (PDCAAS 1.0 hybrid soya-milk protein)",
@@ -44,18 +44,18 @@
       },
       "clinical_use": {
         "pre_op_prehabilitation_7_to_5_days": "Start 5-7 days before elective surgery: 1 serving twice daily (BID). Builds protein reserves, optimises micronutrient levels, strengthens immunity. Especially beneficial for BMI <18.5, >10% weight loss in 6 months, or major GI/orthopaedic/oncological procedures.",
-        "pre_op_window_24_to_2_hrs": "Solid foods stopped 6hrs pre-surgery. Within 2hrs of surgery: strict nil-by-mouth (NPO) — Surgicover MUST NOT be consumed in this window.",
+        "pre_op_window_24_to_2_hrs": "Solid foods stopped 6hrs pre-surgery. Within 2hrs of surgery: strict nil-by-mouth (NPO)   Surgicover MUST NOT be consumed in this window.",
         "post_op_day_1_clear_liquids": "Post-Op Day 1: Clear liquids only (water, broth). Surgicover not yet introduced.",
         "post_op_days_2_to_5_soft_diet": "Post-Op Days 2-5: Introduce Surgicover at 1 serving (20g in 150ml lukewarm water) twice daily as patient transitions to soft/pureed diet.",
         "post_op_days_6_to_14_and_beyond": "Post-Op Days 6-14+: Continue 1-2 servings daily. Can be blended into pureed oatmeal or warm porridges.",
         "home_recovery_14_to_30_days": "Maintain 1-2 servings daily for 14-30 days post-discharge. Administer 20-30 minutes post-physiotherapy to optimise muscle protein synthesis."
       },
       "key_clinical_points": [
-        "Zero added sucrose — prevents post-operative hyperglycaemia which impairs wound healing and increases infection risk",
-        "L-Arginine (200mg per serving) — boosts nitric oxide for wound perfusion, collagen deposition, and immune T-cell response",
-        "L-Leucine (100mg per serving) — activates mTORC1 to stimulate muscle protein synthesis and prevent muscle wasting",
-        "PDCAAS 1.0 protein — clinically equivalent to whey in amino acid quality with superior GI tolerance for post-op patients",
-        "Lactose <0.1g per serving — safe for patients with secondary lactose intolerance",
+        "Zero added sucrose   prevents post-operative hyperglycaemia which impairs wound healing and increases infection risk",
+        "L-Arginine (200mg per serving)   boosts nitric oxide for wound perfusion, collagen deposition, and immune T-cell response",
+        "L-Leucine (100mg per serving)   activates mTORC1 to stimulate muscle protein synthesis and prevent muscle wasting",
+        "PDCAAS 1.0 protein   clinically equivalent to whey in amino acid quality with superior GI tolerance for post-op patients",
+        "Lactose <0.1g per serving   safe for patients with secondary lactose intolerance",
         "Aligned with ERAS (Enhanced Recovery After Surgery) protocols across all major surgical departments"
       ],
       "knowledge_sections": [
@@ -72,17 +72,17 @@
         {
           "title": "Safety and Contraindications",
           "chatbot": true,
-          "content": "SAFE FOR: Diabetic patients (zero sucrose, sucralose GI=0). Secondary lactose intolerance (lactose <0.1g per serving). ENT and oral surgery (smooth, non-acidic liquid). Cardiac/vascular patients (0.19g fat, zero sucrose). CKD CAUTION: Stage 3+ CKD — monitor total protein, phosphorus, and calcium intake under nephrologist guidance. NOT FOR: Parenteral/IV use. Within 2 hours before anaesthesia (NPO window). ALLERGENS: Contains Milk and Soy. Do NOT mix above 40 C / 104 F."
+          "content": "SAFE FOR: Diabetic patients (zero sucrose, sucralose GI=0). Secondary lactose intolerance (lactose <0.1g per serving). ENT and oral surgery (smooth, non-acidic liquid). Cardiac/vascular patients (0.19g fat, zero sucrose). CKD CAUTION: Stage 3+ CKD   monitor total protein, phosphorus, and calcium intake under nephrologist guidance. NOT FOR: Parenteral/IV use. Within 2 hours before anaesthesia (NPO window). ALLERGENS: Contains Milk and Soy. Do NOT mix above 40 C / 104 F."
         },
         {
           "title": "How Surgicover Compares",
           "chatbot": true,
-          "content": "Versus Ensure HP: No free-form L-Arginine or L-Leucine; contains sucrose. Versus PentaSure HP: Uses whey (lactose risk for post-op patients); contains fructose and maltodextrin (glycaemic). Versus Resource HP (Nestle): Whey and maltodextrin (high GI); no surgical amino acid spike. Surgicover is the only supplement in this segment with a dual free-form L-Arginine (200mg) + L-Leucine (100mg) spike per serving, zero sucrose (sucralose only), and a lactose-compatible SPI protein matrix — purpose-built for the peri-operative window."
+          "content": "Versus Ensure HP: No free-form L-Arginine or L-Leucine; contains sucrose. Versus PentaSure HP: Uses whey (lactose risk for post-op patients); contains fructose and maltodextrin (glycaemic). Versus Resource HP (Nestle): Whey and maltodextrin (high GI); no surgical amino acid spike. Surgicover is the only supplement in this segment with a dual free-form L-Arginine (200mg) + L-Leucine (100mg) spike per serving, zero sucrose (sucralose only), and a lactose-compatible SPI protein matrix   purpose-built for the peri-operative window."
         },
         {
           "title": "Frequently Asked Questions",
           "chatbot": true,
-          "content": "Q: Safe for diabetics? A: Yes — zero sucrose, sucralose GI=0. Diabetic Cover variant is specifically for diabetic/pre-diabetic surgical patients. Q: Lactose concern from Skimmed Milk Powder? A: Lactose per serving <0.1g — far below the 12g clinical threshold. Safe for post-op patients with secondary lactose intolerance. Q: Is 6g protein per serving enough? A: Yes — designed for fractionated dosing (3-4 servings/day = 18-24g protein) to avoid gastric distension and amino acid saturation. Q: Can it be mixed with hot water or tea? A: No — use lukewarm/room-temperature liquids only (below 40 C / 104 F). Q: When to start? A: 5-7 days before surgery; resume from post-op Day 2; continue 14-30 days post-discharge. Q: CKD patients? A: Usable but requires nephrologist/dietician supervision to manage protein, phosphorus, and calcium. Q: Tube feeding? A: Can be given via syringe or feeding tube for ENT/dental patients — not a complete tube-feed formula. Q: Does it cause constipation? A: No — SPI does not delay gastric emptying; suitable for gynaecological and abdominal surgery patients. Q: Why soya instead of whey? A: SPI is naturally lactose-free and PDCAAS 1.0 equivalent to whey. Post-op patients risk secondary lactose intolerance from whey. SPI also has natural anti-inflammatory properties."
+          "content": "Q: Safe for diabetics? A: Yes   zero sucrose, sucralose GI=0. Diabetic Cover variant is specifically for diabetic/pre-diabetic surgical patients. Q: Lactose concern from Skimmed Milk Powder? A: Lactose per serving <0.1g   far below the 12g clinical threshold. Safe for post-op patients with secondary lactose intolerance. Q: Is 6g protein per serving enough? A: Yes   designed for fractionated dosing (3-4 servings/day = 18-24g protein) to avoid gastric distension and amino acid saturation. Q: Can it be mixed with hot water or tea? A: No   use lukewarm/room-temperature liquids only (below 40 C / 104 F). Q: When to start? A: 5-7 days before surgery; resume from post-op Day 2; continue 14-30 days post-discharge. Q: CKD patients? A: Usable but requires nephrologist/dietician supervision to manage protein, phosphorus, and calcium. Q: Tube feeding? A: Can be given via syringe or feeding tube for ENT/dental patients   not a complete tube-feed formula. Q: Does it cause constipation? A: No   SPI does not delay gastric emptying; suitable for gynaecological and abdominal surgery patients. Q: Why soya instead of whey? A: SPI is naturally lactose-free and PDCAAS 1.0 equivalent to whey. Post-op patients risk secondary lactose intolerance from whey. SPI also has natural anti-inflammatory properties."
         },
         {
           "title": "Pricing and How to Order",

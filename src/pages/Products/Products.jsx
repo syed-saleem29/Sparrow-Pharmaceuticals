@@ -19,7 +19,7 @@ export default function Products() {
     <>
       <Helmet>
         <title>Clinical Nutrition Products | Surgicover | Sparrow Pharmaceuticals India</title>
-        <meta name="description" content="Sparrow Pharmaceuticals' product range for peri-operative clinical nutrition. Surgicover — surgical recovery supplement with L-Arginine, L-Leucine, and zero added sucrose. For hospitals and surgical centres across India." />
+        <meta name="description" content="Sparrow Pharmaceuticals' product range for peri-operative clinical nutrition. Surgicover   surgical recovery supplement with L-Arginine, L-Leucine, and zero added sucrose. For hospitals and surgical centres across India." />
         <meta name="keywords" content="Sparrow Pharmaceuticals products, Surgicover, clinical nutrition supplement India, peri-operative supplement, surgical nutrition products, hospital supplement India" />
         <link rel="canonical" href="https://sparrowpharmaceuticals.in/products" />
       </Helmet>

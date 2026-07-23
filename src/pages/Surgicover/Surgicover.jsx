@@ -19,11 +19,11 @@ export default function Surgicover() {
   return (
     <>
       <Helmet>
-        <title>Surgicover — Peri-Operative Clinical Nutrition Supplement | Sparrow Pharmaceuticals India</title>
+        <title>Surgicover   Peri-Operative Clinical Nutrition Supplement | Sparrow Pharmaceuticals India</title>
         <meta name="description" content="Surgicover: India's peri-operative clinical nutrition supplement. L-Arginine 200mg (wound healing), L-Leucine 100mg (muscle preservation), 6g PDCAAS 1.0 soya protein, zero added sucrose, 14 vitamins and minerals per 20g serving. ERAS-aligned. 3 variants: Vanilla, Chocolate, Diabetic Cover (Dry Fruits). For hospitals, surgeons, and clinical dieticians." />
         <meta name="keywords" content="Surgicover, peri-operative nutrition supplement, surgical recovery supplement, post-operative protein supplement India, L-Arginine wound healing, L-Leucine muscle preservation, PDCAAS 1.0 protein, zero sucrose protein supplement, diabetic surgical supplement, ERAS nutrition supplement, soya protein surgery, clinical nutrition supplement India, Sparrow Pharmaceuticals, post surgery protein India, pre-operative supplement, surgical prehabilitation, muscle wasting prevention surgery, wound healing supplement India, collagen synthesis supplement, nitric oxide supplement surgery" />
         <link rel="canonical" href="https://sparrowpharmaceuticals.in/products/surgicover" />
-        <meta property="og:title" content="Surgicover — Peri-Operative Nutrition Supplement | Sparrow Pharmaceuticals" />
+        <meta property="og:title" content="Surgicover   Peri-Operative Nutrition Supplement | Sparrow Pharmaceuticals" />
         <meta property="og:description" content="India's surgical recovery supplement with L-Arginine, L-Leucine, zero sucrose and PDCAAS 1.0 protein. Available for hospitals and surgical centres." />
         <meta property="og:url" content="https://sparrowpharmaceuticals.in/products/surgicover" />
         <script type="application/ld+json">{JSON.stringify({
@@ -62,7 +62,7 @@ export default function Surgicover() {
             {
               "@type": "Question",
               "name": "How is Surgicover different from Ensure HP or PentaSure HP?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Surgicover is the only supplement in this category with a dual free-form L-Arginine (200mg) + L-Leucine (100mg) spike per serving for direct NOS and mTORC1 activation. Unlike Ensure HP (contains sucrose, no free L-Arginine/L-Leucine) and PentaSure HP (whey-based with fructose and maltodextrin), Surgicover uses lactose-compatible SPI protein and zero sucrose — purpose-built for the peri-operative window." }
+              "acceptedAnswer": { "@type": "Answer", "text": "Surgicover is the only supplement in this category with a dual free-form L-Arginine (200mg) + L-Leucine (100mg) spike per serving for direct NOS and mTORC1 activation. Unlike Ensure HP (contains sucrose, no free L-Arginine/L-Leucine) and PentaSure HP (whey-based with fructose and maltodextrin), Surgicover uses lactose-compatible SPI protein and zero sucrose   purpose-built for the peri-operative window." }
             },
             {
               "@type": "Question",

@@ -4,7 +4,7 @@ import { MessageCircle, X, Send } from 'lucide-react'
 import styles from './ChatBot.module.css'
 
 const WELCOME = {
-  text: "Hi! I'm the Sparrow Assistant 👋\n\nAsk me anything about Surgicover — ingredients, variants, how to order, pricing, or clinical evidence. I'm here to help.",
+  text: "Hi! I'm the Sparrow Assistant 👋\n\nAsk me anything about Surgicover   ingredients, variants, how to order, pricing, or clinical evidence. I'm here to help.",
   quickReplies: ['What is Surgicover?', 'Product variants', 'How to order', 'Speak to the team'],
 }
 

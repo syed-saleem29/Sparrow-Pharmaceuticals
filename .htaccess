@@ -8,7 +8,7 @@ AddType application/javascript .js
   RewriteEngine On
   RewriteBase /
 
-  # PHP files (e.g. /api/chat.php) — serve directly, do not rewrite
+  # PHP files (e.g. /api/chat.php)   serve directly, do not rewrite
   RewriteRule \.php$ - [L]
 
   # Static asset bundles (JS/CSS with hashed names)
@@ -17,6 +17,6 @@ AddType application/javascript .js
   # All other static file types (images, fonts, ico, etc.)
   RewriteRule ^(.+\.(ico|png|jpg|jpeg|webp|gif|svg|woff|woff2|ttf|eot|json|txt|xml|map))$ dist/$1 [L,NC]
 
-  # React SPA — everything else serves dist/index.html
+  # React SPA   everything else serves dist/index.html
   RewriteRule ^ dist/index.html [L]
 </IfModule>
